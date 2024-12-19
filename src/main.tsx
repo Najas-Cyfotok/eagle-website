@@ -5,6 +5,7 @@ import App from "./App.tsx";
 import Container from "./components/container.tsx";
 import Header from "./components/header.tsx";
 import { BrowserRouter } from "react-router-dom";
+import Footer from "./components/footer.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -12,6 +13,7 @@ createRoot(document.getElementById("root")!).render(
       <BrowserRouter>
         <Header />
         <App />
+        <Footer/>
       </BrowserRouter>
     </Container>
   </StrictMode>
