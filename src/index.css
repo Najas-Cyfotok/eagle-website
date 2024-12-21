@@ -71,3 +71,18 @@ body{
     @apply bg-background text-foreground;
   }
 }
+
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+  /* section {
+    scroll-snap-align: inherit;
+  }
+  html,
+  body {
+    transition: scroll-position 0.3s ease-out;
+  } */
+}
