@@ -4,6 +4,7 @@ import HeroBG from "../assets/Home/bckgrnd.jpg";
 import ProductsBG from "../assets/Home/machine-turning-metal-bg.png";
 import ObjectiveBG from "../assets/Home/objective.jpg";
 import discoverBG from "../assets/Home/discoverBG.png";
+import ProductBG from "./products/product-bg.jpeg";
 import product1 from "./products/1.png";
 import product2 from "./products/2.png";
 import product3 from "./products/3.png";
@@ -130,4 +131,12 @@ export const Products = [
   },
 ];
 
-export { logo, logoWhite, HeroBG, ProductsBG, ObjectiveBG, discoverBG };
+export {
+  logo,
+  logoWhite,
+  HeroBG,
+  ProductsBG,
+  ObjectiveBG,
+  discoverBG,
+  ProductBG,
+};
