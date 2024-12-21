@@ -5,6 +5,7 @@ import ProductsBG from "../assets/Home/machine-turning-metal-bg.png";
 import ObjectiveBG from "../assets/Home/objective.jpg";
 import discoverBG from "../assets/Home/discoverBG.png";
 import ProductBG from "./products/product-bg.jpeg";
+import productDetailsBG from './product-details/intense-foundry.jpg'
 import product1 from "./products/1.png";
 import product2 from "./products/2.png";
 import product3 from "./products/3.png";
@@ -25,7 +26,7 @@ export const Products = [
     sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
     grades: "304 & Cast Iron",
     properties: [],
-    link: "#",
+    link: "pipe-adapters",
   },
   {
     id: 2,
@@ -36,7 +37,7 @@ export const Products = [
     sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
     grades: "304 & Cast Iron",
     properties: [],
-    link: "#",
+    link: "pump-adapters",
   },
   {
     id: 3,
@@ -56,7 +57,7 @@ export const Products = [
     ],
     grades: "304 & Cast Iron",
     properties: [],
-    link: "#",
+    link: "reducers",
   },
   {
     id: 4,
@@ -67,7 +68,7 @@ export const Products = [
     sizes: ["1”", "1½”"],
     grades: "SS 304",
     properties: [],
-    link: "#",
+    link: "foot-valves",
   },
   {
     id: 5,
@@ -78,7 +79,7 @@ export const Products = [
     sizes: [],
     grades: "",
     properties: ["CNC Threaded", "Rust Free"],
-    link: "#",
+    link: "expanders",
   },
   {
     id: 6,
@@ -89,7 +90,7 @@ export const Products = [
     sizes: ["1¼”", "1½”", '2"'],
     grades: "SS 304",
     properties: ["Rust Free", "Long Lasting", "100% No Welding"],
-    link: "#",
+    link: "rope-collars",
   },
   {
     id: 7,
@@ -100,7 +101,7 @@ export const Products = [
     properties: ["CNC Threaded", "Cable Slot", "Rope Slot", "Nitrile O’Ring"],
     sizes: [],
     grades: "",
-    link: "#",
+    link: "cast-iron-adapters",
   },
   {
     id: 8,
@@ -111,7 +112,7 @@ export const Products = [
     sizes: ["1”", "1¼”"],
     properties: ["Rust Free", "Easy To Install", "100% No Welding"],
     grades: "SS 304",
-    link: "#",
+    link: "jet-assemblies",
   },
   {
     id: 9,
@@ -127,7 +128,7 @@ export const Products = [
       "Leak Proof",
       "Long Lasting",
     ],
-    link: "#",
+    link: "ferrule-fcv-nrv",
   },
 ];
 
@@ -139,4 +140,5 @@ export {
   ObjectiveBG,
   discoverBG,
   ProductBG,
+  productDetailsBG
 };
