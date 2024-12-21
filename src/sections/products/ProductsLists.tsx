@@ -16,7 +16,7 @@ const ProductsLists = () => {
         </select>
       </div>
 
-      <div className="grid grid-cols-3 gap-5 mt-10">
+      <div className="grid max-lg:grid-cols-2 max-sm:grid-cols-1 grid-cols-3 gap-5 mt-10 justify-items-center">
         {
             Products.map((item, index) => (
                 <ProductListCard key={index} title={item.name} des={item.description} img={item.imageUrl}/>
