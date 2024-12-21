@@ -46,7 +46,7 @@ const Header = () => {
 
   return (
     <nav
-      className={`flex justify-between items-center px-5 fixed w-full max-w-screen-2xl z-50 transition-colors duration-300 py-1 ${navClassNames}`}
+      className={`flex justify-between items-center px-5 fixed w-full max-w-screen-2xl z-50 transition-colors duration-300 py-1 border-b border-b-gray-300/20 ${navClassNames}`}
     >
       {/* Logo */}
       <img

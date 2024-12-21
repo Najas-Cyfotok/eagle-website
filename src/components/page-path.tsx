@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { ChevronRight, Home } from "lucide-react";
 
 type PathProps = {
@@ -5,10 +6,11 @@ type PathProps = {
   subParams?: string;
   category?: string;
   route?: string;
+  className?: string;
 };
-const PagePath = ({ param, subParams, category, route }: PathProps) => {
+const PagePath = ({ param, subParams, category, route, className }: PathProps) => {
   return (
-    <div className="flex items-center gap-2">
+    <div className={cn("flex items-center gap-2", className)}>
       <Home className="w-5 h-5 mb-1 text-white/70" />
       {category && (
         <>
