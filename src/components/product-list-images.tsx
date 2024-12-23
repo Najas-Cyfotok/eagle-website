@@ -5,7 +5,7 @@ const ProductsListImage = () => {
   return (
     <div className="w-full flex items-end ">
       {Products.map((product, index) => (
-        <Link to={product.link}>
+        <Link to={`/product/${product.link}`}>
           <motion.div
             // initial={{ y: -50 }}
             // animate={{ y: 0 }}
@@ -18,7 +18,7 @@ const ProductsListImage = () => {
             // }}
             // whileHover={{ transition: { repeat: 0 } }}
             key={index}
-            className="w-full h-full"
+            className="w-full h-full scale-95 hover:scale-105 transition duration-300"
           >
             <img
               src={product.imageUrl}

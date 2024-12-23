@@ -5,7 +5,9 @@ import ProductsBG from "../assets/Home/machine-turning-metal-bg.png";
 import ObjectiveBG from "../assets/Home/objective.jpg";
 import discoverBG from "../assets/Home/discoverBG.png";
 import ProductBG from "./products/product-bg.jpeg";
-import productDetailsBG from './product-details/intense-foundry.jpg'
+import productDetailsBG from "./product-details/intense-foundry.jpg";
+import manufacturingProcessBG from "./manufactor/manufactorBG.jpg";
+import ContactBG from './contact/contactBG.png'
 import product1 from "./products/1.png";
 import product2 from "./products/2.png";
 import product3 from "./products/3.png";
@@ -15,6 +17,14 @@ import product6 from "./products/6.png";
 import product7 from "./products/7.png";
 import product8 from "./products/8.png";
 import product9 from "./products/9.png";
+import product10 from "./products/10.png";
+import product11 from "./products/11.png";
+import product12 from "./products/12.png";
+import product13 from "./products/13.png";
+
+import manufactor1 from "./manufactor/shell-moulding.png";
+import manufactor2 from "./manufactor/co2-moulding.png";
+import manufactor3 from "./manufactor/power-coating.png";
 
 export const Products = [
   {
@@ -130,6 +140,71 @@ export const Products = [
     ],
     link: "ferrule-fcv-nrv",
   },
+  {
+    id: 10,
+    name: "Pump Adapters",
+    imageUrl: product10,
+    description:
+      "The Pump adapters (Bottom adapter)is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for lOO% accuracy.",
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
+    grades: "304 & Cast Iron",
+    properties: [],
+    link: "pump-adapters-1",
+  },
+  {
+    id: 11,
+    name: "Pump Adapters",
+    imageUrl: product11,
+    description:
+      "The Pump adapters (Bottom adapter)is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for lOO% accuracy.",
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
+    grades: "304 & Cast Iron",
+    properties: [],
+    link: "pump-adapters-2",
+  },
+  {
+    id: 12,
+    name: "Pump Adapters",
+    imageUrl: product12,
+    description:
+      "The Pump adapters (Bottom adapter)is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for lOO% accuracy.",
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
+    grades: "304 & Cast Iron",
+    properties: [],
+    link: "pump-adapters-3",
+  },
+  {
+    id: 13,
+    name: "Pump Adapters",
+    imageUrl: product13,
+    description:
+      "The Pump adapters (Bottom adapter)is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for lOO% accuracy.",
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
+    grades: "304 & Cast Iron",
+    properties: [],
+    link: "pump-adapters-4",
+  },
+];
+
+export const manufacturingProcess = [
+  {
+    id: 1,
+    title: "Shell Molding",
+    des: "Shell molding, also known as shell casting or investment casting, is a precision casting process used to create intricate metal parts. This process allows us to produce high-quality, complex shapes with excellent surface finishes.",
+    img: manufactor1,
+  },
+  {
+    id: 2,
+    title: "CO2 Molding",
+    des: "CO2 molding, or CO2 sand casting, is a method where carbon dioxide is used to harden the sand mold. This process ensures that our castings have excellent surface finishes and dimensional accuracy.",
+    img: manufactor2,
+  },
+  {
+    id: 3,
+    title: "Powder Coating",
+    des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
+    img: manufactor3,
+  },
 ];
 
 export {
@@ -140,5 +215,7 @@ export {
   ObjectiveBG,
   discoverBG,
   ProductBG,
-  productDetailsBG
+  productDetailsBG,
+  manufacturingProcessBG,
+  ContactBG
 };

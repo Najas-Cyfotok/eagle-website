@@ -29,11 +29,11 @@ const ProductCard = () => {
           {Products.map((product, index) => (
             <CarouselItem
               key={index}
-              className="pl-1 sm:basis-1/2 md:basis-1/3 lg:basis-1/6"
+              className="pl-1 sm:basis-1/2 md:basis-1/3 lg:basis-1/5"
             >
               <div className="p-1">
-                <Link to={product.link}>
-                  <Card className=" h-[300px] hover:bg-orange-400 transition duration-300 border-none scale-95 hover:scale-100 relative">
+                <Link to={`/product/${product.link}`}>
+                  <Card className=" h-[300px] bg-white/10 text-white hover:bg-orange-400 transition duration-300 border-none scale-95 hover:scale-100 relative">
                     <CardContent className="flex flex-col items-center  p-6 justify-between">
                       <h3 className="text-base font-bold">{product.name}</h3>
                       <img
@@ -51,8 +51,8 @@ const ProductCard = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="hover:bg-orange-400 border-none"/>
-        <CarouselNext className="hover:bg-orange-400 border-none"/>
+        <CarouselPrevious className="hover:bg-orange-400 border-none" />
+        <CarouselNext className="hover:bg-orange-400 border-none" />
       </Carousel>
     </div>
   );

@@ -46,14 +46,16 @@ const Header = () => {
 
   return (
     <nav
-      className={`flex justify-between items-center px-5 fixed w-full max-w-screen-2xl z-50 transition-colors duration-300 py-1 border-b border-b-gray-300/20 ${navClassNames}`}
+      className={`flex justify-between items-center px-5 fixed w-full max-w-screen-2xl z-50 transition-colors duration-300 py-1 border-b border-b-gray-300/20  ${navClassNames}`}
     >
       {/* Logo */}
+      <Link to={'/'}>
       <img
         src={isScrolled ? logo : logoWhite}
         alt="logo"
         className="w-20 h-20"
       />
+      </Link>
 
       {/* Navigation Links */}
       <ul className="flex items-center gap-6 text-sm max-md:hidden">

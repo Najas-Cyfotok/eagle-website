@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 
 const ProductDetailsHeroSection = () => {
   const { id } = useParams();
+  
 
   return (
     <section className="h-[150px] bg-black px-3 relative overflow-x-hidden">
