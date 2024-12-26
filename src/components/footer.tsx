@@ -1,4 +1,7 @@
 import { logo } from "@/assets/asset";
+import { EnduratekLogo } from "@/assets/asset";
+import { skanthalogo } from "@/assets/asset";
+import { cepllogo } from "@/assets/asset";
 import {
   Facebook,
   Instagram,
@@ -17,15 +20,9 @@ const Footer = () => {
           Our Authorized Dealers{" "}
         </h3>
         <div className="flex justify-center my-7 gap-x-16">
-          <img src="src/assets/Home/cepllogo.png" className="w-36 h-36" />
-          <img
-            src="src/assets/Home/v1-Enduratek-Logo-01.svg"
-            className="w-36 h-36"
-          />
-          <img
-            src="src/assets/Home/skantha_logo.enc.png"
-            className="w-36 h-36"
-          />
+          <img src={cepllogo} className="w-36 h-36" />
+          <img src={EnduratekLogo} className="w-36 h-36" />
+          <img src={skanthalogo} className="w-36 h-36" />
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-36 max-lg:px-5 py-10  gap-y-6 justify-center">
           <div className="flex flex-col ">

@@ -22,7 +22,9 @@ import product11 from "./products/11.png";
 import product12 from "./products/12.png";
 import product13 from "./products/13.png";
 import cncturing from "./Home/cncturing.jpg";
-
+import EnduratekLogo from "./Home/v1-Enduratek-Logo-01.svg";
+import skanthalogo from "./Home/skantha_logo.enc.png";
+import cepllogo from "./Home/cepllogo.png";
 import manufactor1 from "./manufactor/shell-moulding.png";
 import manufactor2 from "./manufactor/co2-moulding.png";
 import manufactor3 from "./manufactor/power-coating.png";
@@ -220,4 +222,7 @@ export {
   manufacturingProcessBG,
   ContactBG,
   cncturing,
+  skanthalogo,
+  cepllogo,
+  EnduratekLogo,
 };
