@@ -12,6 +12,24 @@ const routes = [
   {
     name: "Products",
     path: "/products",
+    products: [
+      {
+        name: "Product 1",
+        path: "/product/1",
+      },
+      {
+        name: "Product 2",
+        path: "/product/2",
+      },
+      {
+        name: "Product 3",
+        path: "/product/3",
+      },
+      {
+        name: "Product 4",
+        path: "/product/4",
+      },
+    ],
   },
   {
     name: "Manufacturing Process",
@@ -49,12 +67,12 @@ const Header = () => {
       className={`flex justify-between items-center px-5 fixed w-full max-w-screen-2xl z-50 transition-colors duration-300 py-1 border-b border-b-gray-300/20  ${navClassNames}`}
     >
       {/* Logo */}
-      <Link to={'/'}>
-      <img
-        src={isScrolled ? logo : logoWhite}
-        alt="logo"
-        className="w-20 h-20"
-      />
+      <Link to={"/"}>
+        <img
+          src={isScrolled ? logo : logoWhite}
+          alt="logo"
+          className="w-20 h-20"
+        />
       </Link>
 
       {/* Navigation Links */}
@@ -117,7 +135,6 @@ const Header = () => {
                   <Link to={route.path}>{route.name}</Link>
                 </motion.li>
               ))}
-             
             </ul>
           </motion.div>
         )}

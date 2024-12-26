@@ -4,7 +4,7 @@ import { Eye, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
 const ObjectiveSection = () => {
   return (
-    <section className="my-20 max-md:h-auto flex items-center justify-center px-5 max-lg:flex-col max-lg:gap-y-6 overflow-x-hidden">
+    <section className="my-20 max-md:h-auto flex items-center justify-center px-5 max-lg:flex-col max-lg:gap-y-6 overflow-x-hidden min-h-screen">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         transition={{ duration: 0.5, delay: 0.7 }}

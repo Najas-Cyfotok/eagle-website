@@ -11,7 +11,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="min-h-[300px] bg-[#fff6ed]">
+    <section className="mt-10">
+      <footer className="min-h-[300px] bg-[#fff6ed]">
       <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 px-36 max-lg:px-5 py-10  gap-y-6 ">
         <div className="flex flex-col ">
           <img src={logo} alt="logo" className="w-24 h-24" />
@@ -66,6 +67,7 @@ const Footer = () => {
         <p className="text-xs ">All Rights Reserved | Terms and Conditions | Privacy Policy</p>
       </div>
     </footer>
+    </section>
   );
 };
 

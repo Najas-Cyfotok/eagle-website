@@ -74,15 +74,17 @@ body{
 
 
 @layer base {
-  html {
+  html,
+  section {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
   }
   section {
-    scroll-snap-align: inherit;
+    scroll-snap-align: start;
   }
   html,
-  body {
-    transition: scroll-position 0.3s ease-out;
+  section {
+    transition: scroll-position 0.1s ease-out;
   }
 }
+
