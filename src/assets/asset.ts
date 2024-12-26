@@ -7,7 +7,7 @@ import discoverBG from "../assets/Home/discoverBG.png";
 import ProductBG from "./products/product-bg.jpeg";
 import productDetailsBG from "./product-details/intense-foundry.jpg";
 import manufacturingProcessBG from "./manufactor/manufactorBG.jpg";
-import ContactBG from './contact/contactBG.png'
+import ContactBG from "./contact/contactBG.png";
 import product1 from "./products/1.png";
 import product2 from "./products/2.png";
 import product3 from "./products/3.png";
@@ -21,6 +21,7 @@ import product10 from "./products/10.png";
 import product11 from "./products/11.png";
 import product12 from "./products/12.png";
 import product13 from "./products/13.png";
+import cncturing from "./Home/cncturing.jpg";
 
 import manufactor1 from "./manufactor/shell-moulding.png";
 import manufactor2 from "./manufactor/co2-moulding.png";
@@ -217,5 +218,6 @@ export {
   ProductBG,
   productDetailsBG,
   manufacturingProcessBG,
-  ContactBG
+  ContactBG,
+  cncturing,
 };

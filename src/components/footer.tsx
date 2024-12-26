@@ -13,60 +13,80 @@ const Footer = () => {
   return (
     <section className="mt-10">
       <footer className="min-h-[300px] bg-[#fff6ed]">
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 px-36 max-lg:px-5 py-10  gap-y-6 ">
-        <div className="flex flex-col ">
-          <img src={logo} alt="logo" className="w-24 h-24" />
-          <ul className="flex items-center gap-x-2 -mt-2">
-            {socialLinks.map((item, index) => (
-              <Link to={item.link} key={index}>
-                <li className="bg-white rounded-full p-2">{item.icon}</li>
-              </Link>
-            ))}
-          </ul>
+        <h3 className="text-3xl text-center font-bold">
+          Our Authorized Dealers{" "}
+        </h3>
+        <div className="flex justify-center my-7 gap-x-16">
+          <img src="src/assets/Home/cepllogo.png" className="w-36 h-36" />
+          <img
+            src="src/assets/Home/v1-Enduratek-Logo-01.svg"
+            className="w-36 h-36"
+          />
+          <img
+            src="src/assets/Home/skantha_logo.enc.png"
+            className="w-36 h-36"
+          />
         </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-36 max-lg:px-5 py-10  gap-y-6 justify-center">
+          <div className="flex flex-col ">
+            <img src={logo} alt="logo" className="w-24 h-24" />
+            <ul className="flex items-center gap-x-2 -mt-2">
+              {socialLinks.map((item, index) => (
+                <Link to={item.link} key={index}>
+                  <li className="bg-white rounded-full p-2">{item.icon}</li>
+                </Link>
+              ))}
+            </ul>
+          </div>
 
-        <div>
-          <h2 className="text-lg font-bold mb-4">Quick Links</h2>
-          <ul className="flex flex-col gap-y-2">
-            {links.map((item, index) => (
-              <Link to={item.link} key={index}>
-                <li className="text-xs hover:text-orange-600">{item.name}</li>
-              </Link>
-            ))}
-          </ul>
-        </div>
+          <div>
+            <h2 className="text-lg font-bold mb-4">Quick Links</h2>
+            <ul className="flex flex-col gap-y-2">
+              {links.map((item, index) => (
+                <Link to={item.link} key={index}>
+                  <li className="text-xs hover:text-orange-600">{item.name}</li>
+                </Link>
+              ))}
+            </ul>
+          </div>
 
-        <div>
-          <h2 className="text-lg font-bold mb-4">Contact</h2>
-          <ul className="flex flex-col gap-y-2">
-            {contact.map((item, index) => (
-              <li key={index} className="flex items-center gap-x-2">
-                <span className="text-xs">{item.icon}</span>
-                <span className="text-xs">{item.contact}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+          <div>
+            <h2 className="text-lg font-bold mb-4">Contact</h2>
+            <ul className="flex flex-col gap-y-2">
+              {contact.map((item, index) => (
+                <li key={index} className="flex items-center gap-x-2">
+                  <span className="text-xs">{item.icon}</span>
+                  <span className="text-xs">
+                    <Link to={`tel:${item.contact}`} target="_blank">
+                      {item.contact}
+                    </Link>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-        <div>
-          <h2 className="text-lg font-bold mb-4">Our Authorized Dealers</h2>
-          <ul className="flex flex-col gap-y-2">
-            {dealers.map((item, index) => (
-              <li key={index} className="flex items-center gap-x-2">
-                <span className="text-xs">{item.name}</span>
-              </li>
-            ))}
-          </ul>
+          {/* <div>
+            <h2 className="text-lg font-bold mb-4">Our Authorized Dealers</h2>
+            <ul className="flex flex-col gap-y-2">
+              {dealers.map((item, index) => (
+                <li key={index} className="flex items-center gap-x-2">
+                  <span className="text-xs">{item.name}</span>
+                </li>
+              ))}
+            </ul>
+          </div> */}
         </div>
-      </div>
-      <hr className="max-w-screen-xl mx-auto" />
-      <div className="flex items-center justify-between px-36 max-lg:px-5 py-5 max-md:flex-col-reverse max-md:text-center">
-        <p className="text-xs">
-          © 2024 Eagle Pipe Fittings & Valves. All rights reserved.
-        </p>
-        <p className="text-xs ">All Rights Reserved | Terms and Conditions | Privacy Policy</p>
-      </div>
-    </footer>
+        <hr className="max-w-screen-xl mx-auto" />
+        <div className="flex items-center justify-between px-36 max-lg:px-5 py-5 max-md:flex-col-reverse max-md:text-center">
+          <p className="text-xs">
+            © 2024 Eagle Pipe Fittings & Valves. All rights reserved.
+          </p>
+          <p className="text-xs ">
+            All Rights Reserved | Terms and Conditions | Privacy Policy
+          </p>
+        </div>
+      </footer>
     </section>
   );
 };
@@ -118,7 +138,7 @@ export const contact = [
   },
   {
     name: "phone",
-    contact: "+91 7395889955, +91 7395889922",
+    contact: "+91 7395889922",
     icon: <Phone />,
   },
   {
