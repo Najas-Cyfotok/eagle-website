@@ -1,4 +1,4 @@
-import { ObjectiveBG } from "@/assets/asset";
+import { cncturing } from "@/assets/asset";
 import ObjectiveCard from "@/components/objective-card";
 import { Eye, Rocket } from "lucide-react";
 import { motion } from "framer-motion";
@@ -23,7 +23,7 @@ const ObjectiveSection = () => {
         </p>
         <div className="relative">
           <img
-            src={ObjectiveBG}
+            src={cncturing}
             alt="objective-bg"
             className="rounded-lg max-w-[450px] max-sm:w-[350px]"
           />
