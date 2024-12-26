@@ -3,7 +3,7 @@ import ProductCard from "@/components/product-card";
 
 const ProductsSection = () => {
   return (
-    <section className="h-screen  bg-black flex justify-center items-center  max-h-[1080px] max-md:h-[600px] max-md:flex-col max-md:gap-y-16  overflow-x-hidden relative">
+    <section className="min-h-screen bg-black flex justify-center items-center  max-h-[1080px] max-md:h-[600px] max-md:flex-col max-md:gap-y-16  overflow-x-hidden relative">
       <img
         src={ProductsBG}
         alt="product-BG"
