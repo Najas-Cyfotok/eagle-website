@@ -14,16 +14,17 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <section className="mt-10">
+    <section className="mt-10 parallax">
       <footer className="min-h-[300px] bg-[#fff6ed]">
-        <h3 className="text-3xl text-center font-bold">
+        <h3 className="text-3xl text-center font-bold py-6">
           Our Authorized Dealers{" "}
         </h3>
-        <div className="flex justify-center my-7 gap-x-16">
-          <img src={cepllogo} className="w-36 h-36" />
-          <img src={EnduratekLogo} className="w-36 h-36" />
-          <img src={skanthalogo} className="w-36 h-36" />
+        <div className="flex flex-wrap justify-center gap-4 my-2">
+          <img src={cepllogo} className="w-24 h-24 sm:w-36 sm:h-36" />
+          <img src={EnduratekLogo} className="w-24 h-24 sm:w-36 sm:h-36" />
+          <img src={skanthalogo} className="w-24 h-24 sm:w-36 sm:h-36" />
         </div>
+
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-36 max-lg:px-5 py-10  gap-y-6 justify-center">
           <div className="flex flex-col ">
             <img src={logo} alt="logo" className="w-24 h-24" />
