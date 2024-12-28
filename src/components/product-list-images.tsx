@@ -5,7 +5,7 @@ const ProductsListImage = () => {
   return (
     <div className="w-full flex items-end ">
       {Products.map((product, index) => (
-        <Link to={`/product/${product.link}`}>
+        <Link to={`/product/${product.link}`} key={index}>
           <motion.div
             // initial={{ y: -50 }}
             // animate={{ y: 0 }}
