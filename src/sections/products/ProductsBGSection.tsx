@@ -2,6 +2,7 @@ import { ProductBG } from "@/assets/asset";
 import PagePath from "@/components/page-path";
 
 const ProductsBGSection = () => {
+  
   return (
     <section className="h-[300px] relative">
       <img

@@ -88,3 +88,8 @@ body{
   }
 }
 
+
+#scrollable-container {
+  overflow: auto;
+  height: 100vh;
+}

@@ -3,6 +3,13 @@ import { logo, logoWhite } from "../assets/asset";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { AlignJustify, X } from "lucide-react";
+import {
+  NavigationMenuItem,
+  NavigationMenuTrigger,
+  NavigationMenuContent,
+  NavigationMenu,
+  NavigationMenuList,
+} from "@radix-ui/react-navigation-menu";
 
 const routes = [
   {
@@ -13,6 +20,10 @@ const routes = [
     name: "Products",
     path: "/products",
     products: [
+      {
+        name:'All Products',
+        path: "/products"
+      },
       {
         name: "Product 1",
         path: "/product/1",
@@ -77,27 +88,65 @@ const Header = () => {
 
       {/* Navigation Links */}
       <ul className="flex items-center gap-6 text-sm max-md:hidden">
-        {routes.map((route, index) => (
-          <li
-            key={index}
-            className={`relative flex items-center ${
-              location.pathname === route.path ? "font-bold" : ""
-            } hover:text-orange-500 transition`}
-          >
-            {/* Link */}
-            <Link to={route.path} className="mb-1">
-              {route.name}
-            </Link>
+        {routes.map((route, index) =>
+          route.name === "Products" ? (
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="relative">
+                    Products
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <ul className="flex flex-col gap-y-5 absolute mt-5 bg-white p-2 rounded-md w-[150px]">
+                      {/* {route.products.map((component) => (
+                  <ListItem
+                  key={component.title}
+                  title={component.title}
+                  href={component.href}
+                  >
+                  {component.description}
+                  </ListItem>
+                  ))} */}
+                      {route.products?.map((component, index) => (
+                        <motion.li
+                          animate={{ opacity: 1, y: 0 }}
+                          initial={{ opacity: 0, y: -10 }}
+                          transition={{ duration: 0.3, }}
+                          key={index}
+                          className="text-black font-medium hover:text-orange-500 "
+                        >
+                          <Link to={component.path} className="mb-1">
+                            {component.name}
+                          </Link>
+                        </motion.li>
+                      ))}
+                    </ul>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+          ) : (
+            <li
+              key={index}
+              className={`relative flex items-center ${
+                location.pathname === route.path ? "font-bold" : ""
+              } hover:text-orange-500 transition`}
+            >
+              {/* Link */}
+              <Link to={route.path} className="mb-1">
+                {route.name}
+              </Link>
 
-            {/* Active Link Animation */}
-            {location.pathname === route.path && (
-              <motion.div
-                layoutId="header-active-link"
-                className="bg-orange-500 h-1 w-full absolute bottom-0 rounded-2xl"
-              />
-            )}
-          </li>
-        ))}
+              {/* Active Link Animation */}
+              {location.pathname === route.path && (
+                <motion.div
+                  layoutId="header-active-link"
+                  className="bg-orange-500 h-1 w-full absolute bottom-0 rounded-2xl"
+                />
+              )}
+            </li>
+          )
+        )}
       </ul>
 
       <div className="hidden max-md:block">
