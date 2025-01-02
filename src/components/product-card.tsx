@@ -39,10 +39,10 @@ const ProductCard = () => {
                       <img
                         src={product.imageUrl}
                         alt={product.name}
-                        className="hover:scale-125 transition duration-300 scale-110"
+                        className="hover:scale-125 transition duration-300 scale-110 h-40"
                       />
                       <div className="w-full flex justify-center font-semibold rounded-b-lg bg-black/75 text-white text-xl absolute bottom-0 p-2 ">
-                        <Link to={product.link}>View</Link>
+                        <Link to={`/product/${product.link}`}>View</Link>
                       </div>
                     </CardContent>
                   </Card>

@@ -32,7 +32,7 @@ const ProductListCard = ({ title, des, img, link }: ProductCardProps) => {
             <CardDescription>{des.slice(0, 75).concat("...")}</CardDescription>
           </CardHeader>
           <CardContent className="flex justify-center ">
-            <img src={img} alt={title} className="w-[200px] max-h-52" />
+            <img src={img} alt={title} className="w-[200px] max-h-28" />
           </CardContent>
           <CardFooter>
             <Button className="w-full bg-orange-600 hover:bg-orange-500">
