@@ -23,7 +23,7 @@ const ProductListCard = ({ title, des, img, link }: ProductCardProps) => {
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.5 , delay: 0.3}}
+        transition={{ duration: 0.5, delay: 0.3 }}
         viewport={{ once: true }}
       >
         <Card className="shadow-lg hover:scale-105 transition duration-300 w-[300px]">
@@ -32,7 +32,7 @@ const ProductListCard = ({ title, des, img, link }: ProductCardProps) => {
             <CardDescription>{des.slice(0, 75).concat("...")}</CardDescription>
           </CardHeader>
           <CardContent className="flex justify-center ">
-            <img src={img} alt={title} className="w-[200px]" />
+            <img src={img} alt={title} className="w-[200px] max-h-52" />
           </CardContent>
           <CardFooter>
             <Button className="w-full bg-orange-600 hover:bg-orange-500">
@@ -46,4 +46,3 @@ const ProductListCard = ({ title, des, img, link }: ProductCardProps) => {
 };
 
 export default ProductListCard;
-

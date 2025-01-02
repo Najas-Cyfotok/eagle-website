@@ -29,11 +29,25 @@ import manufactor1 from "./manufactor/shell-moulding.png";
 import manufactor2 from "./manufactor/co2-moulding.png";
 import manufactor3 from "./manufactor/power-coating.png";
 
+import p1 from "./products/images/Product_11.png";
+import p2 from "./products/images/Product_5.png";
+import p3 from "./products/images/Product_6.png";
+import p4 from "./products/images/Product_7.png";
+import p5 from "./products/images/Product_1.png";
+import p6 from "./products/images/Product_13.png";
+import p7 from "./products/images/Product_8.png";
+import p8 from "./products/images/Product_10.png";
+import p9 from "./products/images/Product_4.png";
+import p10 from "./products/images/Product_9.png";
+import p11 from "./products/images/Product_2.png";
+import p12 from "./products/images/Product_12.png";
+import p13 from "./products/images/Product_3.png";
+
 export const Products = [
   {
     id: 1,
     name: "Pipe Adapters",
-    imageUrl: product1,
+    imageUrl: p5,
     description:
       "The Pipe adapters (Top adapters) is used for  connecting top most column pipe to the discharge fitting/discharge bend",
     sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
@@ -43,19 +57,19 @@ export const Products = [
   },
   {
     id: 2,
-    name: "Pump Adapters",
-    imageUrl: product2,
+    name: "Expander Bush",
+    imageUrl: p1,
     description:
-      "The Pump adapters (Bottom adapter)is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for lOO% accuracy.",
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
-    grades: "304 & Cast Iron",
+      "Super heavy adapters ensures withstand of substantial loads and stresses, making them suitable for heavy-duty applications. These adapters are designed to distribute loads evenly across the column pipe and the connected elements. This helps in preventing localized stress concentrations that could lead to structural failure.",
+    sizes: ["1¼”", "1½”", "2”"],
+    grades: "",
     properties: [],
-    link: "pump-adapters",
+    link: "expander-bush",
   },
   {
     id: 3,
     name: "Reducers",
-    imageUrl: product3,
+    imageUrl: p2,
     description:
       "Reducers are designed with ACME thread to ensure proper gripping & there is no chance of column slippage during installation & removal of pumps.",
     sizes: [
@@ -75,7 +89,7 @@ export const Products = [
   {
     id: 4,
     name: "Foot Valve",
-    imageUrl: product4,
+    imageUrl: p3,
     description:
       "Foot Valve is designed with the latest technology incorporating a double guide support for plunger & O-ring is precision fitted to the poppet for a positive seal into the tapered (33˚) self-cleaning valve.",
     sizes: ["1”", "1½”"],
@@ -86,53 +100,64 @@ export const Products = [
   {
     id: 5,
     name: "Expanders",
-    imageUrl: product5,
+    imageUrl: p4,
     description:
       "Expanders are designed to expand the pump discharge connecting the BSP Threaded side to the pump 6 ACME Threaded side to the column pipe.",
-    sizes: [],
+    sizes: ["1¼”X1½”", "1½”X2”"],
     grades: "",
     properties: ["CNC Threaded", "Rust Free"],
     link: "expanders",
   },
   {
     id: 6,
-    name: "Rope Collar",
-    imageUrl: product6,
+    name: "Hose Nipple",
+    imageUrl: p6,
     description:
-      "Rope Collar issued to secure the pump by connect- inq ropes at both ends of the Rope Collar. 'EAGLE´ Rope Collar is a single mould casted component, without any weld joints.",
-    sizes: ["1¼”", "1½”", '2"'],
-    grades: "SS 304",
-    properties: ["Rust Free", "Long Lasting", "100% No Welding"],
-    link: "rope-collars",
+      "Stainless steel hose nipples are mainly used for connecting HDPE pipes with pumps. Particularly in applications involving Submersible and open-well pumps. EAGLE Hose nipples are designed to secure the connection with a secured precision CNC-finished thread.",
+    properties: [],
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”"],
+    grades: "",
+    link: "hose-nipple",
   },
   {
     id: 7,
-    name: "Cast Iron Adapters",
-    imageUrl: product7,
+    name: "Hose Nipple",
+    imageUrl: p6,
     description:
-      "Cast Iron Adapters are suitable for low-depth borewells, the outer surface is finished with powder coating for atmospheric protection.",
-    properties: ["CNC Threaded", "Cable Slot", "Rope Slot", "Nitrile O’Ring"],
-    sizes: [],
+      "Stainless steel hose nipples are mainly used for connecting HDPE pipes with pumps. Particularly in applications involving Submersible and open-well pumps. EAGLE Hose nipples are designed to secure the connection with a secured precision CNC-finished thread.",
+    properties: [],
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”"],
     grades: "",
-    link: "cast-iron-adapters",
+    link: "hose-nipple",
   },
   {
     id: 8,
-    name: "Jet Assembly",
-    imageUrl: product8,
+    name: "Super Heavy Adapters",
+    imageUrl: p8,
     description:
-      "Jet Assembly increases the compressor pump´s water flow continuity and to minimize the water pipes scaling.",
-    sizes: ["1”", "1¼”"],
-    properties: ["Rust Free", "Easy To Install", "100% No Welding"],
-    grades: "SS 304",
-    link: "jet-assemblies",
+      "Super heavy adapters ensures withstand of substantial loads and stresses, making them suitable for heavy-duty applications. These adapters are designed to distribute loads evenly across the column pipe and the connected elements. This helps in preventing localized stress concentrations that could lead to structural failure.",
+    sizes: ["1¼”", "1½”", "2"],
+    properties: [],
+    grades: "",
+    link: "super-heavy-adapters",
   },
   {
     id: 9,
-    name: "Ferrule FC/NRV",
-    imageUrl: product9,
+    name: "Cast Iron Adapters",
+    imageUrl: p9,
     description:
-      "FCV/NRV (Flow control & Non-Return Valve) is used to stop the reverse flow of water in FHTC (Functional household tap connection) & to prevent water theft. 'EAGLE´ FCV/NRV is certified by FCRI (Fluid Control Research Institute).",
+      "Cast Iron Adapters are suitable for low-depth borewells, the outer surface is finished with powder coating for atmospheric protection.",
+    sizes: [],
+    grades: "",
+    properties: ["CNC thread", "Cable Slot", "Rope Slot", "Nitrile O'Ring"],
+    link: "cast-iron-adapters",
+  },
+  {
+    id: 10,
+    name: "Ferrule FCV/NRV",
+    imageUrl: p10,
+    description:
+      "FCV/NRV (Flow control & Non-Return Valve) is used to stop the reverse flow of water in FHTC (Functional household tap connection) & to pre- vent water theft. 'EAGLE' FCV/NRV is certified by FCRI (Fluid control research institute).",
     sizes: [],
     grades: "",
     properties: [
@@ -144,48 +169,37 @@ export const Products = [
     link: "ferrule-fcv-nrv",
   },
   {
-    id: 10,
-    name: "Pump Adapters",
-    imageUrl: product10,
-    description:
-      "The Pump adapters (Bottom adapter)is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for lOO% accuracy.",
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
-    grades: "304 & Cast Iron",
-    properties: [],
-    link: "pump-adapters-1",
-  },
-  {
     id: 11,
     name: "Pump Adapters",
-    imageUrl: product11,
+    imageUrl: p11,
     description:
-      "The Pump adapters (Bottom adapter)is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for lOO% accuracy.",
+      "The bottom adapter is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for 100% accuracy.",
     sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
     grades: "304 & Cast Iron",
     properties: [],
-    link: "pump-adapters-2",
+    link: "pump-adapters",
   },
   {
     id: 12,
-    name: "Pump Adapters",
-    imageUrl: product12,
+    name: "Reducer Bush",
+    imageUrl: p12,
     description:
-      "The Pump adapters (Bottom adapter)is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for lOO% accuracy.",
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
-    grades: "304 & Cast Iron",
+      "A reducer bush is used to connect pipes of different diameters, typically transitioning from a larger to a smaller diameter. This is crucial in systems where different pipe sizes need to be integrated without causing flow disruption.",
+    sizes: ["1¼”X1", "1½”X11¼", "2”X1½”"],
+    grades: "",
     properties: [],
-    link: "pump-adapters-3",
+    link: "reducer-bush",
   },
   {
     id: 13,
-    name: "Pump Adapters",
-    imageUrl: product13,
+    name: "Rope Collar",
+    imageUrl: p13,
     description:
-      "The Pump adapters (Bottom adapter)is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for lOO% accuracy.",
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
-    grades: "304 & Cast Iron",
+      "Rope Collar is used to secure the pump by connect- ing ropes at both ends of the Rope Collar. 'EAGLE' Rope Collar is a single mould casted component, not welded.",
+    sizes: ["1¼”", "1½”", "2”"],
+    grades: "SS 304",
     properties: [],
-    link: "pump-adapters-4",
+    link: "rope-collar",
   },
 ];
 
@@ -210,6 +224,74 @@ export const manufacturingProcess = [
   },
 ];
 
+export const dummyPhotos = [
+  {
+    id: 1,
+    link: "expander-bush",
+    img: p1,
+  },
+  {
+    id: 2,
+    link: "reducers",
+    img: p2,
+  },
+  {
+    id: 3,
+    link: "foot-valves",
+    img: p3,
+  },
+
+  {
+    id: 4,
+    link: "expanders",
+    img: p4,
+  },
+  {
+    id: 5,
+    link: "pipe-adapters",
+    img: p5,
+  },
+  {
+    id: 6,
+    link: "hose-nipple",
+    img: p6,
+  },
+  {
+    id: 7,
+    link: "#",
+    img: p7,
+  },
+  {
+    id: 8,
+    link: "super-heavy-adapters",
+    img: p8,
+  },
+  {
+    id: 9,
+    link: "cast-iron-adapters",
+    img: p9,
+  },
+  {
+    id: 10,
+    link: "ferrule-fcv-nrv",
+    img: p10,
+  },
+  {
+    id: 11,
+    link: "pump-adapters",
+    img: p11,
+  },
+  {
+    id: 12,
+    link: "reducer-bush",
+    img: p12,
+  },
+  {
+    id: 13,
+    link: "rope-collar",
+    img: p13,
+  },
+];
 export {
   logo,
   logoWhite,

@@ -21,24 +21,56 @@ const routes = [
     path: "/products",
     products: [
       {
-        name:'All Products',
-        path: "/products"
+        name: "All Products",
+        path: "/products",
       },
       {
-        name: "Product 1",
-        path: "/product/1",
+        name: "Pipe Adapters",
+        path: "/product/pipe-adapters",
       },
       {
-        name: "Product 2",
-        path: "/product/2",
+        name: "Expander Bush",
+        path: "/product/expander-bush",
       },
       {
-        name: "Product 3",
-        path: "/product/3",
+        name: "Reducers",
+        path: "/product/reducers",
       },
       {
-        name: "Product 4",
-        path: "/product/4",
+        name: "Foot Valve",
+        path: "/product/foot-valves",
+      },
+      {
+        name: "Expanders",
+        path: "/product/expanders",
+      },
+      {
+        name: "Hose Nipple",
+        path: "/product/hose-nipple",
+      },
+      {
+        name: "Super Heavy Adapters",
+        path: "/product/super-heavy-adapters",
+      },
+      {
+        name: "Cast Iron Adapters",
+        path: "/product/cast-iron-adapters",
+      },
+      {
+        name: "Ferrule FCV/NRV",
+        path: "/product/ferrule-fcv-nrv",
+      },
+      {
+        name: "Pump Adapters",
+        path: "/product/pump-adapters",
+      },
+      {
+        name: "Reducer Bush",
+        path: "/product/reducer-bush",
+      },
+      {
+        name: "Rope Collar",
+        path: "/product/rope-collar",
       },
     ],
   },
@@ -75,14 +107,14 @@ const Header = () => {
 
   return (
     <nav
-      className={`flex justify-between items-center px-5 fixed w-full max-w-screen-2xl z-50 transition-colors duration-300 py-1 border-b border-b-gray-300/20  ${navClassNames}`}
+      className={`flex justify-between items-center px-5 fixed w-full max-w-screen-2xl z-50 transition-colors duration-300 border-b border-b-gray-300/20  ${navClassNames}`}
     >
       {/* Logo */}
       <Link to={"/"}>
         <img
           src={isScrolled ? logo : logoWhite}
           alt="logo"
-          className="w-20 h-20"
+          className="w-24 h-24"
         />
       </Link>
 
@@ -97,7 +129,7 @@ const Header = () => {
                     Products
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
-                    <ul className="flex flex-col gap-y-5 absolute mt-5 bg-white p-2 rounded-md w-[150px]">
+                    <ul className="grid grid-cols-2 gap-y-3 absolute mt-5 bg-white p-2 rounded-md w-[350px]">
                       {/* {route.products.map((component) => (
                   <ListItem
                   key={component.title}
@@ -111,7 +143,7 @@ const Header = () => {
                         <motion.li
                           animate={{ opacity: 1, y: 0 }}
                           initial={{ opacity: 0, y: -10 }}
-                          transition={{ duration: 0.3, }}
+                          transition={{ duration: 0.3 }}
                           key={index}
                           className="text-black font-medium hover:text-orange-500 "
                         >
