@@ -1,10 +1,10 @@
-import { Products } from "@/assets/asset";
+import { dummyPhotos } from "@/assets/asset";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 const ProductsListImage = () => {
   return (
     <div className="w-full flex items-end ">
-      {Products.map((product, index) => (
+      {dummyPhotos.map((product, index) => (
         <Link to={`/product/${product.link}`} key={index}>
           <motion.div
             // initial={{ y: -50 }}
@@ -21,9 +21,9 @@ const ProductsListImage = () => {
             className="w-full h-full scale-95 hover:scale-105 transition duration-300"
           >
             <img
-              src={product.imageUrl}
-              alt={product.name}
-              className="w-full h-[200px] object-cover"
+              src={product.img}
+              alt={product.link}
+              className="w-[100px] h-auto object-cover"
             />
           </motion.div>
         </Link>

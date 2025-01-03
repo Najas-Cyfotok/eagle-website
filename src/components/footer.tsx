@@ -19,49 +19,57 @@ const Footer = () => {
         <h3 className="text-3xl text-center font-bold py-6">
           Our Authorized Dealers{" "}
         </h3>
-        <div className="flex flex-wrap justify-center gap-4 my-2">
+        <div className="flex flex-wrap justify-evenly gap-4 my-2">
           <img src={cepllogo} className="w-24 h-24 sm:w-36 sm:h-36" />
           <img src={EnduratekLogo} className="w-24 h-24 sm:w-36 sm:h-36" />
           <img src={skanthalogo} className="w-24 h-24 sm:w-36 sm:h-36" />
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-36 max-lg:px-5 py-10  gap-y-6 justify-center">
-          <div className="flex flex-col ">
-            <img src={logo} alt="logo" className="w-24 h-24" />
-            <ul className="flex items-center gap-x-2 -mt-2">
-              {socialLinks.map((item, index) => (
-                <Link to={item.link} key={index}>
-                  <li className="bg-white rounded-full p-2">{item.icon}</li>
-                </Link>
-              ))}
-            </ul>
+          <div className="flex justify-center">
+            <div className="flex flex-col ">
+              <img src={logo} alt="logo" className="w-32 h-32 -mt-6" />
+              <ul className="flex items-center gap-x-2 -mt-2">
+                {socialLinks.map((item, index) => (
+                  <Link to={item.link} key={index}>
+                    <li className="bg-white rounded-full p-2">{item.icon}</li>
+                  </Link>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-lg font-bold mb-4">Quick Links</h2>
-            <ul className="flex flex-col gap-y-2">
-              {links.map((item, index) => (
-                <Link to={item.link} key={index}>
-                  <li className="text-xs hover:text-orange-600">{item.name}</li>
-                </Link>
-              ))}
-            </ul>
+          <div className="flex justify-center">
+            <div>
+              <h2 className="text-lg font-bold mb-4">Quick Links</h2>
+              <ul className="flex flex-col gap-y-2">
+                {links.map((item, index) => (
+                  <Link to={item.link} key={index}>
+                    <li className="text-xs hover:text-orange-600">
+                      {item.name}
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <h2 className="text-lg font-bold mb-4">Contact</h2>
-            <ul className="flex flex-col gap-y-2">
-              {contact.map((item, index) => (
-                <li key={index} className="flex items-center gap-x-2">
-                  <span className="text-xs">{item.icon}</span>
-                  <span className="text-xs">
-                    <Link to={`tel:${item.contact}`} target="_blank">
-                      {item.contact}
-                    </Link>
-                  </span>
-                </li>
-              ))}
-            </ul>
+          <div className=" flex justify-center items-left sm:ml-10 lg:ml-28">
+            <div>
+              <h2 className="text-lg font-bold mb-4 ">Contact</h2>
+              <ul className="flex flex-col gap-y-2 ">
+                {contact.map((item, index) => (
+                  <li key={index} className="flex">
+                    <span className="text-xs">{item.icon}</span>
+                    <span className="text-xs">
+                      <Link to={`tel:${item.contact}`} target="_blank">
+                        {item.contact}
+                      </Link>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           {/* <div>
