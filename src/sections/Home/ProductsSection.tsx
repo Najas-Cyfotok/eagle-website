@@ -9,7 +9,7 @@ const ProductsSection = () => {
         alt="product-BG"
         className="w-full h-full opacity-30 object-cover absolute "
       />
-      <div className="z-10 py-16  w-full flex flex-col items-center relative px-16">
+      <div className="z-10 py-12  w-full flex flex-col items-center relative px-16">
         <h2 className="font-semibold text-5xl text-white max-sm:text-3xl">
           Our Products
         </h2>

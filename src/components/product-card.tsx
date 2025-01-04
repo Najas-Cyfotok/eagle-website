@@ -8,7 +8,6 @@ import {
   CarouselPrevious,
 } from "./ui/carousel";
 import { Link } from "react-router-dom";
-import Autoplay from "embla-carousel-autoplay";
 
 const ProductCard = () => {
   return (
@@ -19,11 +18,6 @@ const ProductCard = () => {
           align: "start",
           loop: true,
         }}
-        plugins={[
-          Autoplay({
-            delay: 2000,
-          }),
-        ]}
       >
         <CarouselContent className="-ml-1">
           {Products.map((product, index) => (
