@@ -18,11 +18,6 @@ const ProductCard = () => {
           align: "start",
           loop: true,
         }}
-        // plugins={[
-        //   Autoplay({
-        //     delay: 2000,
-        //   }),
-        // ]}
       >
         <CarouselContent className="-ml-1">
           {Products.map((product, index) => (
