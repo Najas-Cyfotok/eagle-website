@@ -114,7 +114,7 @@ const Header = () => {
         <img
           src={isScrolled ? logo : logoWhite}
           alt="logo"
-          className="w-24 h-24"
+          className="w-28 my-3"
         />
       </Link>
 

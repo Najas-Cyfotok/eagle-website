@@ -1,5 +1,6 @@
-import logo from "../assets/logo-dark.svg";
-import logoWhite from "../assets/logo-light.svg";
+import logo from "../assets/logo-dark.png";
+import logoWhite from "../assets/logo-white.png";
+import logoGrey from  '../assets/Home/eagle black.png'
 import HeroBG from "../assets/Home/bg2.jpeg";
 import ProductsBG from "../assets/Home/machine-turning-metal-bg.png";
 import ObjectiveBG from "../assets/Home/objective.jpg";
@@ -295,6 +296,7 @@ export const dummyPhotos = [
 export {
   logo,
   logoWhite,
+  logoGrey,
   HeroBG,
   ProductsBG,
   ObjectiveBG,
