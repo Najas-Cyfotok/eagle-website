@@ -17,19 +17,19 @@ const Footer = () => {
     <section className="mt-10 parallax">
       <footer className="min-h-[300px] bg-[#fff6ed]">
         <h3 className="text-3xl text-center font-bold py-6">
-          Our Authorized Dealers{" "}
+          Our Authorized Distributors{" "}
         </h3>
-        <div className="flex flex-wrap justify-evenly gap-4 my-2">
+        <div className="flex flex-wrap justify-evenly gap-4 my-2 max-sm:flex-col max-sm:items-center">
           <img src={cepllogo} className="w-24 h-24 sm:w-36 sm:h-36" />
-          <img src={EnduratekLogo} className="w-24 h-24 sm:w-36 sm:h-36" />
+          <img src={EnduratekLogo} className="w-full  h-32 sm:w-36 sm:h-36 scale-150 max-sm:w-auto" />
           <img src={skanthalogo} className="w-24 h-24 sm:w-36 sm:h-36" />
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-36 max-lg:px-5 py-10  gap-y-6 justify-center">
           <div className="flex justify-center">
             <div className="flex flex-col ">
-              <img src={logo} alt="logo" className="w-32 h-32 -mt-6" />
-              <ul className="flex items-center gap-x-2 -mt-2">
+              <img src={logo} alt="logo" className="w-32 mt-3" />
+              <ul className="flex items-center gap-x-2 mt-2">
                 {socialLinks.map((item, index) => (
                   <Link to={item.link} key={index}>
                     <li className="bg-white rounded-full p-2">{item.icon}</li>

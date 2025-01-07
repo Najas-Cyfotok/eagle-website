@@ -5,17 +5,17 @@ import { motion } from "framer-motion";
 const DiscoverSection = () => {
   return (
     <section className="min-h-screen">
-      <div className="mx-auto h-[700px] my-20">
+      <div className="mx-auto my-20 h-full min-h-screen">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.6, ease: "easeInOut" }}
-          className="max-w-[1280px] mx-auto relative top-20 w-full h-full flex items-center justify-center "
+          className="max-w-[1280px] mx-auto relative top-16 w-full  flex items-center justify-center  h-screen py-5"
         >
           <img
             src={discoverBG}
             alt="discover"
-            className="absolute w-full h-full object-cover bg-blend-darken"
+            className="absolute w-full h-full py-10  object-contain bg-blend-darken max-xl:object-cover "
           />
           <div className="z-10 flex justify-center items-center text-white px-3 max-w-[1000px] max-md:flex-col">
             <h2 className="text-4xl font-bold w-1/2 max-md:w-full">

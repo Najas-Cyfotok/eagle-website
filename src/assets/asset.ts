@@ -1,6 +1,7 @@
 import logo from "../assets/logo-dark.png";
 import logoWhite from "../assets/logo-white.png";
 import logoGrey from  '../assets/Home/eagle black.png'
+import logoFlip from '../assets/logo-flip.png'
 import HeroBG from "../assets/Home/bg2.jpeg";
 import ProductsBG from "../assets/Home/machine-turning-metal-bg.png";
 import ObjectiveBG from "../assets/Home/objective.jpg";
@@ -23,7 +24,7 @@ import ContactBG from "./contact/contactBG.png";
 // import product12 from "./products/12.png";
 // import product13 from "./products/13.png";
 import cncturing from "./Home/cncturing.jpg";
-import EnduratekLogo from "./Home/v1-Enduratek-Logo-01.svg";
+import EnduratekLogo from "./Home/enduratek.png";
 import skanthalogo from "./Home/skantha_logo.enc.png";
 import cepllogo from "./Home/cepllogo.png";
 import manufactor1 from "./manufactor/shell-moulding.png";
@@ -122,17 +123,6 @@ export const Products = [
   },
   {
     id: 7,
-    name: "Hose Nipple",
-    imageUrl: p6,
-    description:
-      "Stainless steel hose nipples are mainly used for connecting HDPE pipes with pumps. Particularly in applications involving Submersible and open-well pumps. EAGLE Hose nipples are designed to secure the connection with a secured precision CNC-finished thread.",
-    properties: [],
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”"],
-    grades: "",
-    link: "hose-nipple",
-  },
-  {
-    id: 8,
     name: "Super Heavy Adapters",
     imageUrl: p8,
     description:
@@ -143,7 +133,7 @@ export const Products = [
     link: "super-heavy-adapters",
   },
   {
-    id: 9,
+    id: 8,
     name: "Cast Iron Adapters",
     imageUrl: p9,
     description:
@@ -154,7 +144,7 @@ export const Products = [
     link: "cast-iron-adapters",
   },
   {
-    id: 10,
+    id: 9,
     name: "Ferrule FCV/NRV",
     imageUrl: p10,
     description:
@@ -170,7 +160,7 @@ export const Products = [
     link: "ferrule-fcv-nrv",
   },
   {
-    id: 11,
+    id: 10,
     name: "Pump Adapters",
     imageUrl: p11,
     description:
@@ -181,7 +171,7 @@ export const Products = [
     link: "pump-adapters",
   },
   {
-    id: 12,
+    id: 11,
     name: "Reducer Bush",
     imageUrl: p12,
     description:
@@ -192,7 +182,7 @@ export const Products = [
     link: "reducer-bush",
   },
   {
-    id: 13,
+    id: 12,
     name: "Rope Collar",
     imageUrl: p13,
     description:
@@ -297,6 +287,7 @@ export {
   logo,
   logoWhite,
   logoGrey,
+  logoFlip,
   HeroBG,
   ProductsBG,
   ObjectiveBG,

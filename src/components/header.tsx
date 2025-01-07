@@ -102,7 +102,7 @@ const Header = () => {
   }, []);
 
   const navClassNames = isScrolled
-    ? "bg-[#fff6ed] text-black"
+    ? "bg-slate-200 bg-opacity-20 backdrop-blur-xl text-black"
     : "bg-black/30 text-white";
 
   return (
