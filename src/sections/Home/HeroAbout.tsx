@@ -1,4 +1,4 @@
-import { logo } from "@/assets/asset";
+import {  logoGrey } from "@/assets/asset";
 import ProductsListImage from "@/components/product-list-images";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -13,9 +13,9 @@ const HeroAbout = () => {
         className="w-1/2 flex-col flex gap-y-6 relative  min-h-[400px] justify-center max-md:w-full"
       >
         <img
-          src={logo}
+          src={logoGrey}
           alt="logo"
-          className="absolute w-full h-full opacity-10 -left-56"
+          className="absolute w-full h-full opacity-10 -left-56 scale-125"
         />
         <h2 className="font-semibold text-5xl text-orange-600">About US</h2>
         <p className="text-2xl">Engineering with Purpose</p>

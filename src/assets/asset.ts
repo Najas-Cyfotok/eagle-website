@@ -1,5 +1,6 @@
-import logo from "../assets/logo-dark.svg";
-import logoWhite from "../assets/logo-light.svg";
+import logo from "../assets/logo-dark.png";
+import logoWhite from "../assets/logo-white.png";
+import logoGrey from  '../assets/Home/eagle black.png'
 import HeroBG from "../assets/Home/bg2.jpeg";
 import ProductsBG from "../assets/Home/machine-turning-metal-bg.png";
 import ObjectiveBG from "../assets/Home/objective.jpg";
@@ -8,19 +9,19 @@ import ProductBG from "./products/product-bg.jpeg";
 import productDetailsBG from "./product-details/intense-foundry.jpg";
 import manufacturingProcessBG from "./manufactor/manufactorBG.jpg";
 import ContactBG from "./contact/contactBG.png";
-import product1 from "./products/1.png";
-import product2 from "./products/2.png";
-import product3 from "./products/3.png";
-import product4 from "./products/4.png";
-import product5 from "./products/5.png";
-import product6 from "./products/6.png";
-import product7 from "./products/7.png";
-import product8 from "./products/8.png";
-import product9 from "./products/9.png";
-import product10 from "./products/10.png";
-import product11 from "./products/11.png";
-import product12 from "./products/12.png";
-import product13 from "./products/13.png";
+// import product1 from "./products/1.png";
+// import product2 from "./products/2.png";
+// import product3 from "./products/3.png";
+// import product4 from "./products/4.png";
+// import product5 from "./products/5.png";
+// import product6 from "./products/6.png";
+// import product7 from "./products/7.png";
+// import product8 from "./products/8.png";
+// import product9 from "./products/9.png";
+// import product10 from "./products/10.png";
+// import product11 from "./products/11.png";
+// import product12 from "./products/12.png";
+// import product13 from "./products/13.png";
 import cncturing from "./Home/cncturing.jpg";
 import EnduratekLogo from "./Home/v1-Enduratek-Logo-01.svg";
 import skanthalogo from "./Home/skantha_logo.enc.png";
@@ -295,6 +296,7 @@ export const dummyPhotos = [
 export {
   logo,
   logoWhite,
+  logoGrey,
   HeroBG,
   ProductsBG,
   ObjectiveBG,
