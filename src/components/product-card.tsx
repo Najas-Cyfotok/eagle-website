@@ -28,13 +28,19 @@ const ProductCard = () => {
               <div className="p-1">
                 <Link to={`/product/${product.link}`}>
                   <Card className=" h-[350px] bg-white/10 text-white hover:bg-orange-400 transition duration-300 border-none scale-95 hover:scale-100 relative">
-                    <CardContent className="flex flex-col items-center gap-4  p-6 justify-content-between">
+                    <CardContent className="flex flex-col items-center gap-4  p-6 justify-content-between ">
                       <h3 className="text-base font-bold">{product.name}</h3>
-                      <img
-                        src={product.imageUrl}
-                        alt={product.name}
-                        className="hover:scale-110 transition duration-300 scale-100 h-40 w-auto"
-                      />
+                      <div className="relative">
+                        <img
+                          src={product.imageUrl}
+                          alt={product.name}
+                          className={`hover:scale-110 transition duration-300 scale-100 w-auto ${
+                            product.id === 2 || product.id === 11
+                              ? "h-80 relative bottom-36 "
+                              : "h-40"
+                          }`}
+                        />
+                      </div>
                       <div className="w-full flex justify-center font-semibold rounded-b-lg bg-black/75 text-white text-xl absolute bottom-0 p-2 ">
                         <Link to={`/product/${product.link}`}>View</Link>
                       </div>

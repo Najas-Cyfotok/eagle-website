@@ -3,6 +3,7 @@ import logoWhite from "../assets/logo-white.png";
 import logoGrey from  '../assets/Home/eagle black.png'
 import logoFlip from '../assets/logo-flip.png'
 import HeroBG from "../assets/Home/bg2.jpeg";
+import ProductAbout from '../assets/Home/eagle.png'
 import ProductsBG from "../assets/Home/machine-turning-metal-bg.png";
 import ObjectiveBG from "../assets/Home/objective.jpg";
 import discoverBG from "../assets/Home/discoverBG.png";
@@ -300,4 +301,5 @@ export {
   skanthalogo,
   cepllogo,
   EnduratekLogo,
+  ProductAbout
 };

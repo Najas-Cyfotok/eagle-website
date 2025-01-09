@@ -1,7 +1,8 @@
-import {  logoGrey } from "@/assets/asset";
-import ProductsListImage from "@/components/product-list-images";
+import {  logoGrey, ProductAbout } from "@/assets/asset";
+// import ProductsListImage from "@/components/product-list-images";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const HeroAbout = () => {
   return (
@@ -10,7 +11,7 @@ const HeroAbout = () => {
         initial={{ opacity: 0, x: -50 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="w-1/2 flex-col flex gap-y-6 relative  min-h-[400px] justify-center max-md:w-full"
+        className="w-1/2 flex-col flex gap-y-6 max-md:gap-0 max-md:pt-24 relative  min-h-[400px] justify-center max-md:w-full"
       >
         <img
           src={logoGrey}
@@ -38,7 +39,11 @@ const HeroAbout = () => {
         whileInView={{ opacity: 1, x: 0 }}
         className="w-1/2 max-md:w-full "
       >
-        <ProductsListImage />
+        {/* <ProductsListImage /> */}
+        <Link to={'/products'}>
+        
+        <img src={ProductAbout} alt="product list image" />
+        </Link>
       </motion.div>
     </section>
   );
