@@ -1,4 +1,4 @@
-import {  logoGrey, ProductAbout } from "@/assets/asset";
+import { logoGrey, ProductAbout } from "@/assets/asset";
 // import ProductsListImage from "@/components/product-list-images";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const HeroAbout = () => {
   return (
-    <section className="h-screen px-10 max-md:px-3 bg-[#fff6ed] flex justify-center items-center max-h-[1080px] max-md:flex-col max-md:gap-y-16 overflow-x-hidden">
+    <section className="h-screen px-10 max-md:px-3 bg-[#fff6ed] flex justify-center items-center md:max-h-[1080px]  max-md:flex-col max-md:gap-y-16 overflow-x-hidden overflow-y-hidden mb-0">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         transition={{ duration: 0.5, delay: 0.5 }}
@@ -16,7 +16,7 @@ const HeroAbout = () => {
         <img
           src={logoGrey}
           alt="logo"
-          className="absolute w-full h-full opacity-10 -left-56 scale-125"
+          className="absolute top-24 md:top-4  w-full h-full opacity-5 md:-left-56 scale-110 -left-28"
         />
         <h2 className="font-semibold text-5xl text-orange-600">About US</h2>
         <p className="text-2xl">Engineering with Purpose</p>
@@ -40,9 +40,8 @@ const HeroAbout = () => {
         className="w-1/2 max-md:w-full "
       >
         {/* <ProductsListImage /> */}
-        <Link to={'/products'}>
-        
-        <img src={ProductAbout} alt="product list image" />
+        <Link to={"/products"}>
+          <img src={ProductAbout} alt="product list image" />
         </Link>
       </motion.div>
     </section>

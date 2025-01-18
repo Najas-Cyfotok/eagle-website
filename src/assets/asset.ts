@@ -1,9 +1,9 @@
 import logo from "../assets/logo-dark.png";
 import logoWhite from "../assets/logo-white.png";
-import logoGrey from  '../assets/Home/eagle black.png'
-import logoFlip from '../assets/logo-flip.png'
+import logoGrey from "../assets/Home/eagle black.png";
+import logoFlip from "../assets/logo-flip.png";
 import HeroBG from "../assets/Home/bg2.jpeg";
-import ProductAbout from '../assets/Home/eagle.png'
+import ProductAbout from "../assets/Home/eagle.png";
 import ProductsBG from "../assets/Home/machine-turning-metal-bg.png";
 import ObjectiveBG from "../assets/Home/objective.jpg";
 import discoverBG from "../assets/Home/discoverBG.png";
@@ -57,6 +57,8 @@ export const Products = [
     grades: "304 & Cast Iron",
     properties: [],
     link: "pipe-adapters",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-44",
   },
   {
     id: 2,
@@ -68,6 +70,8 @@ export const Products = [
     grades: "",
     properties: [],
     link: "expander-bush",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-28 mt-24",
   },
   {
     id: 3,
@@ -88,6 +92,8 @@ export const Products = [
     grades: "304 & Cast Iron",
     properties: [],
     link: "reducers",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-36 mt-16",
   },
   {
     id: 4,
@@ -99,6 +105,8 @@ export const Products = [
     grades: "SS 304",
     properties: [],
     link: "foot-valves",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-36 mt-16",
   },
   {
     id: 5,
@@ -110,6 +118,8 @@ export const Products = [
     grades: "",
     properties: ["CNC Threaded", "Rust Free"],
     link: "expanders",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 mt-12 w-auto h-40",
   },
   {
     id: 6,
@@ -121,6 +131,8 @@ export const Products = [
     sizes: ["1”", "1¼”", "1½”", "2”", "2½”"],
     grades: "",
     link: "hose-nipple",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-44 mt-8",
   },
   {
     id: 7,
@@ -132,6 +144,8 @@ export const Products = [
     properties: [],
     grades: "",
     link: "super-heavy-adapters",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-52 mt-0",
   },
   {
     id: 8,
@@ -143,6 +157,8 @@ export const Products = [
     grades: "",
     properties: ["CNC thread", "Cable Slot", "Rope Slot", "Nitrile O'Ring"],
     link: "cast-iron-adapters",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-44 mt-8",
   },
   {
     id: 9,
@@ -159,6 +175,8 @@ export const Products = [
       "Long Lasting",
     ],
     link: "ferrule-fcv-nrv",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 mt-12 w-auto h-40",
   },
   {
     id: 10,
@@ -170,6 +188,8 @@ export const Products = [
     grades: "304 & Cast Iron",
     properties: [],
     link: "pump-adapters",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 mt-12 w-auto h-40",
   },
   {
     id: 11,
@@ -181,6 +201,8 @@ export const Products = [
     grades: "",
     properties: [],
     link: "reducer-bush",
+    class:
+      "hover:scale-110 absolute top-10  transition duration-300 scale-100 w-auto h-28 mt-14",
   },
   {
     id: 12,
@@ -192,27 +214,81 @@ export const Products = [
     grades: "SS 304",
     properties: [],
     link: "rope-collar",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 w-auto hover:scale-90 scale-75 mt-[90px]",
   },
 ];
 
 export const manufacturingProcess = [
   {
     id: 1,
-    title: "Shell Molding",
+    title: "Induction melting ",
     des: "Shell molding, also known as shell casting or investment casting, is a precision casting process used to create intricate metal parts. This process allows us to produce high-quality, complex shapes with excellent surface finishes.",
     img: manufactor1,
+    logo: logoFlip,
   },
   {
     id: 2,
-    title: "CO2 Molding",
+    title: "Shell moulding",
     des: "CO2 molding, or CO2 sand casting, is a method where carbon dioxide is used to harden the sand mold. This process ensures that our castings have excellent surface finishes and dimensional accuracy.",
     img: manufactor2,
+    logo: logoGrey,
   },
   {
     id: 3,
-    title: "Powder Coating",
+    title: "CO2 moulding",
     des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
     img: manufactor3,
+    logo: logoFlip,
+  },
+  {
+    id: 4,
+    title: "CNC Machining",
+    des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
+    img: manufactor3,
+    logo: logoGrey,
+  },
+  {
+    id: 5,
+    title: "Ppowder coating",
+    des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
+    img: manufactor3,
+    logo: logoFlip,
+  },
+  {
+    id: 6,
+    title: "Laser engraving",
+    des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
+    img: manufactor3,
+    logo: logoGrey,
+  },
+  {
+    id: 7,
+    title: "⁠Laser cutting",
+    des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
+    img: manufactor3,
+    logo: logoFlip,
+  },
+  {
+    id: 8,
+    title: "3D modelling ",
+    des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
+    img: manufactor3,
+    logo: logoGrey,
+  },
+  {
+    id: 9,
+    title: "3D printing ",
+    des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
+    img: manufactor3,
+    logo: logoFlip,
+  },
+  {
+    id: 10,
+    title: "Speed cast",
+    des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
+    img: manufactor3,
+    logo: logoGrey,
   },
 ];
 
@@ -301,5 +377,5 @@ export {
   skanthalogo,
   cepllogo,
   EnduratekLogo,
-  ProductAbout
+  ProductAbout,
 };

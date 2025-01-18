@@ -15,9 +15,9 @@ const DiscoverSection = () => {
           <img
             src={discoverBG}
             alt="discover"
-            className="absolute w-full h-full py-10  object-contain bg-blend-darken max-xl:object-cover "
+            className="absolute w-full h-full pt-8 pb-16  object-contain bg-blend-darken max-xl:object-cover "
           />
-          <div className="z-10 flex justify-center items-center text-white px-3 max-w-[1000px] max-md:flex-col">
+          <div className="z-10 flex justify-center items-center text-white px-1 max-w-[720px] max-md:flex-col">
             <h2 className="text-4xl font-bold w-1/2 max-md:w-full">
               DISCOVER THE DIFFERENCE QUALITY MAKES.
             </h2>

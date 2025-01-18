@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = () => {
   return (
-    <div className="flex  w-full mt-10">
+    <div className="flex  w-full mt-10 ">
       <Carousel
         className="w-full "
         opts={{
@@ -30,15 +30,13 @@ const ProductCard = () => {
                   <Card className=" h-[350px] bg-white/10 text-white hover:bg-orange-400 transition duration-300 border-none scale-95 hover:scale-100 relative">
                     <CardContent className="flex flex-col items-center gap-4  p-6 justify-content-between ">
                       <h3 className="text-base font-bold">{product.name}</h3>
-                      <div className="relative">
+                      <div className="relative w-full flex justify-center">
                         <img
                           src={product.imageUrl}
                           alt={product.name}
-                          className={`hover:scale-110 transition duration-300 scale-100 w-auto ${
-                            product.id === 2 || product.id === 11
-                              ? "h-80 relative bottom-36 "
-                              : "h-40"
-                          }`}
+                          className={` ${product.class} 
+                          
+                          `}
                         />
                       </div>
                       <div className="w-full flex justify-center font-semibold rounded-b-lg bg-black/75 text-white text-xl absolute bottom-0 p-2 ">

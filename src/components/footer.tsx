@@ -16,13 +16,16 @@ const Footer = () => {
   return (
     <section className="mt-10 parallax">
       <footer className="min-h-[300px] bg-[#fff6ed]">
-        <h3 className="text-3xl text-center font-bold py-6">
+        <h3 className="text-3xl text-center font-bold pt-6">
           Our Authorized Distributors{" "}
         </h3>
-        <div className="flex flex-wrap justify-evenly gap-4 my-2 max-sm:flex-col max-sm:items-center">
-          <img src={cepllogo} className="w-24 h-24 sm:w-36 sm:h-36" />
-          <img src={EnduratekLogo} className="w-full  h-32 sm:w-36 sm:h-36 scale-150 max-sm:w-auto" />
-          <img src={skanthalogo} className="w-24 h-24 sm:w-36 sm:h-36" />
+        <div className="flex flex-wrap justify-evenly gap-10 my-1 max-sm:flex-col max-sm:items-center">
+          <img src={cepllogo} className="w-24 h-24 sm:w-32 sm:h-32" />
+          <img
+            src={EnduratekLogo}
+            className="w-full  h-32 sm:w-36 sm:h-36 scale-150 max-sm:w-auto"
+          />
+          <img src={skanthalogo} className="w-24 h-24 sm:w-36 sm:h-36 pl-4" />
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-36 max-lg:px-5 py-10  gap-y-6 justify-center">
@@ -144,7 +147,7 @@ export const contact = [
   },
   {
     name: "phone",
-    contact: "+91 7395889922",
+    contact: "+91 7395889922,+91 7395889922",
     icon: <Phone />,
   },
   {

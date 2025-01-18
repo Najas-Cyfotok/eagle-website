@@ -22,7 +22,7 @@ const ProductDetailsCard = () => {
           transition={{ duration: 0.5 }}
           className="w-1/2 max-sm:w-full flex justify-center items-center"
         >
-          <div className="w-full bg-gray-300 rounded-md shadow-lg flex justify-center items-center max-w-[400px] hover:scale-105 transition duration-300 hover:bg-orange-300">
+          <div className="w-full bg-gray-300 rounded-md shadow-lg flex justify-center items-center h-[400px] hover:scale-105 transition duration-300 hover:bg-orange-300">
             <img
               src={product.imageUrl}
               alt={product.name}
@@ -48,7 +48,13 @@ const ProductDetailsCard = () => {
   );
 };
 
-const ProductDetailsList = ({ title, items }: { title: string; items: string[] }) => (
+const ProductDetailsList = ({
+  title,
+  items,
+}: {
+  title: string;
+  items: string[];
+}) => (
   <>
     <p className="font-semibold text-xl">{title}:</p>
     <ul className="flex gap-x-2 flex-wrap max-w-[300px] gap-2">
@@ -62,4 +68,3 @@ const ProductDetailsList = ({ title, items }: { title: string; items: string[] }
 );
 
 export default ProductDetailsCard;
-

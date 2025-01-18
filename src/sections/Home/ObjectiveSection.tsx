@@ -13,7 +13,7 @@ const ObjectiveSection = () => {
         transition={{ duration: 0.5 }}
         className="w-full text-center "
       >
-        <h2 className="text-5xl font-semibold text-orange-500 inline-block px-5 mt-[110px] mb-[50px]">
+        <h2 className="text-5xl font-semibold text-orange-500 inline-block px-5 mt-[110px] mb-[20px]">
           Our Objectives
         </h2>
       </motion.div>
@@ -30,7 +30,11 @@ const ObjectiveSection = () => {
           //   backgroundImage: `url(${cncturing})`,
           // }}
         >
-          <img src={cncturing} alt="cntuning" className="w-full h-full object-cover absolute -z-10 opacity-50" />
+          <img
+            src={cncturing}
+            alt="cntuning"
+            className="w-full h-full object-cover absolute -z-10 opacity-50"
+          />
           <div className="bg-black bg-opacity-75 p-6 rounded-lg">
             <p className="text-lg">
               At Eagle Pipe Fittings and Valves, our goal is to lead the
@@ -47,9 +51,13 @@ const ObjectiveSection = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-1/2 bg-[#fff6ed] py-5 rounded-lg max-lg:w-full relative z-10 overflow-hidden"
+          className="w-1/2 bg-[#fff6ed] py-3 rounded-lg max-lg:w-full relative z-10 overflow-hidden"
         >
-            <img src={logoFlip} alt="logo-flip" className="w-full h-full absolute top-0 -z-20 -right-36 scale-125 object-cover max-sm:object-contain max-sm:right-0 opacity-30" />
+          <img
+            src={logoFlip}
+            alt="logo-flip"
+            className="w-full h-full absolute top-0 -z-20 -right-32 scale-100 object-contain max-sm:object-contain max-sm:right-0 opacity-10"
+          />
           <div className="flex flex-col gap-5 items-center z-40">
             {objectiveData.map((item, index) => (
               <ObjectiveCard key={index} {...item} />
