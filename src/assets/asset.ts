@@ -202,7 +202,7 @@ export const Products = [
     properties: [],
     link: "reducer-bush",
     class:
-      "hover:scale-110 absolute top-10  transition duration-300 scale-100 w-auto h-28 mt-14",
+      "hover:scale-110 top-10  transition duration-300 scale-100 w-auto h-28 mt-24",
   },
   {
     id: 12,

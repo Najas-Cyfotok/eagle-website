@@ -15,9 +15,16 @@ type ProductCardProps = {
   des: string;
   img: string;
   link: string;
+  style: string;
 };
 
-const ProductListCard = ({ title, des, img, link }: ProductCardProps) => {
+const ProductListCard = ({
+  title,
+  des,
+  img,
+  link,
+  style,
+}: ProductCardProps) => {
   return (
     <Link to={`/product/${link}`}>
       <motion.div
@@ -29,10 +36,10 @@ const ProductListCard = ({ title, des, img, link }: ProductCardProps) => {
         <Card className="shadow-lg hover:scale-105 transition duration-300 w-[300px]">
           <CardHeader>
             <CardTitle>{title}</CardTitle>
-            <CardDescription>{des.slice(0, 75).concat("...")}</CardDescription>
+            <CardDescription>{`${des.slice(0, 75)}...`}</CardDescription>
           </CardHeader>
-          <CardContent className="flex justify-center h-[200px]">
-            <img src={img} alt={title} className="w-[100px] h-full" />
+          <CardContent className="flex items-center justify-center justify-items-center h-[200px]">
+            <img src={img} alt={title} className={style} />
           </CardContent>
           <CardFooter>
             <Button className="w-full bg-orange-600 hover:bg-orange-500">
