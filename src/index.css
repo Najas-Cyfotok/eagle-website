@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+body {
   font-family: "Montserrat";
 }
 
@@ -72,7 +72,6 @@ body{
   }
 }
 
-
 @layer base {
   html,
   section {
@@ -87,7 +86,6 @@ body{
     transition: scroll-position 0.1s ease-out;
   }
 }
-
 
 #scrollable-container {
   overflow: auto;

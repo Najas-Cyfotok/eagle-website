@@ -5,7 +5,6 @@ import {
   IconBoxAlignRightFilled,
   IconBoxAlignTopLeft,
   IconClipboardCopy,
-  IconFileBroken,
   IconSignature,
   IconTableColumn,
 } from "@tabler/icons-react";

@@ -1,4 +1,4 @@
-import { StarIcon, WorkflowIcon } from "lucide-react";
+import { StarIcon } from "lucide-react";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -13,73 +13,114 @@ const Timeline = () => {
     <section>
       <style>
         {`
-          .vertical-timeline-element-content .vertical-timeline-element-date {
-            padding: 0 !important;
+          .timeline-image {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 350px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            z-index: 1;
+            transition: all 0.3s ease;
+          }
+
+          .timeline-left .timeline-image {
+            left: -550px;
+          }
+
+          .timeline-right .timeline-image {
+            right: -550px;
+          }
+
+          .vertical-timeline-element-content {
+            position: relative;
+            z-index: 2;
+          }
+            @media(max-width:1168px){
+           .timeline-image {
+              position: static;
+              width: 50%;
+              height: auto;
+              margin: 250px auto 0 auto;
+            }
+           
+           }
+
+           @media(max-width:968px){
+           .timeline-image {
+              position: static;
+              width: 70%;
+              height: auto;
+              margin: 200px auto 0 auto;
+            }
+           
+           } 
+
+          @media (max-width: 768px) {
+            .timeline-image {
+              position: static;
+              width: 70%;
+              height: auto;
+              margin: 130px auto 0 auto;
+            }
+
+            .vertical-timeline-element-content {
+              text-align: center;
+            }
           }
         `}
       </style>
+
       <VerticalTimeline lineColor="gray">
+        {/* Content 1 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-right"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
-            height: "300px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
           }}
-          date={
-            <img
-              src={photo1} // Replace with your image path
-              alt="SPEED CAST"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "rgba(231, 148, 103, 0.95)",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            SPEED CAST™:
-          </h3>
+          <img src={photo1} alt="SPEED CAST" className="timeline-image" />
+          <h3 className="text-2xl font-bold">SPEED CAST™:</h3>
           <p>
             SPEED CAST is a sand 3D printing process that allows you to share
-            the 3D model of your component. We will design the gating system for
-            your component and deliver it to you within days or a week. This
-            process eliminates the manufacture of patterns and core boxes, and
-            the prototype manufacturing time and cost are reduced drastically.
+            the 3D model of your component. This process eliminates the
+            manufacture of patterns and core boxes, and the prototype
+            manufacturing time and cost are reduced drastically.
           </p>
         </VerticalTimelineElement>
 
+        {/* Content 2 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-left"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
-            height: "300px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #e2e8f0",
           }}
-          date={
-            <img
-              src={photo2}
-              alt="INDUCTION MELTING"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            INDUCTION MELTING:
-          </h3>
+          <img
+            src={photo2}
+            alt="INDUCTION MELTING"
+            className="timeline-image"
+          />
+          <h3 className="text-2xl font-bold">INDUCTION MELTING:</h3>
           <p>
             We use an induction furnace to melt stainless steel and steel at
             high temperatures. Induction melting is a process in which heat is
@@ -90,32 +131,24 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
 
+        {/* Content 3 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-right"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
-            height: "300px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
           }}
-          date={
-            <img
-              src={photo3} // Replace with your image path
-              alt="SHELL MOULDING"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "#fed7aa",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            SHELL MOULDING:
-          </h3>
+          <img src={photo3} alt="SHELL MOULDING" className="timeline-image" />
+          <h3 className="text-2xl font-bold">SHELL MOULDING:</h3>
           <p>
             Shell moulding is an expendable mould-casting process that uses
             resin-covered sand to form the mould. Resin-coated sand is filled
@@ -127,32 +160,24 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
 
+        {/* Content 4 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-left"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
-            height: "330px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #e2e8f0",
           }}
-          date={
-            <img
-              src={photo1} // Replace with your image path
-              alt="CO2 MOULDING"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            CO2 MOULDING:
-          </h3>
+          <img src={photo1} alt="CO2 MOULDING" className="timeline-image" />
+          <h3 className="text-2xl font-bold">CO2 MOULDING:</h3>
           <p>
             The CO2 or carbon dioxide moulding process: a predetermined
             percentage of sodium silicate is mixed with silica sand, and the
@@ -165,32 +190,24 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
 
+        {/* Content 5 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-right"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
-            height: "300px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
           }}
-          date={
-            <img
-              src={photo1} // Replace with your image path
-              alt="CNC MACHINING"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "#fed7aa",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            CNC MACHINING:
-          </h3>
+          <img src={photo2} alt="CNC MACHINING" className="timeline-image" />
+          <h3 className="text-2xl font-bold">CNC MACHINING:</h3>
           <p>
             CNC machining is a metal removal process that uses different kinds
             of machine tools to remove material from a rotating workpiece to
@@ -200,32 +217,24 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
 
+        {/* Content 6 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-left"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
-            height: "300px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #e2e8f0",
           }}
-          date={
-            <img
-              src={photo1} // Replace with your image path
-              alt="POWDER COATING"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            POWDER COATING:
-          </h3>
+          <img src={photo3} alt="POWDER COATING" className="timeline-image" />
+          <h3 className="text-2xl font-bold">POWDER COATING:</h3>
           <p>
             Powder coating is a surface finishing process that uses a dry powder
             to create a durable, corrosion-resistant coating. A spray gun sprays
@@ -236,32 +245,24 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
 
+        {/* Content 7 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-right"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
-            height: "300px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
           }}
-          date={
-            <img
-              src={photo1} // Replace with your image path
-              alt="LASER ENGRAVING"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "#fed7aa",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            LASER ENGRAVING:
-          </h3>
+          <img src={photo1} alt="LASER ENGRAVING" className="timeline-image" />
+          <h3 className="text-2xl font-bold">LASER ENGRAVING:</h3>
           <p>
             Laser engraving vaporizes materials into fumes to a very shallow
             depth of about 0.01mm to engrave permanent, deep marks. This method
@@ -270,32 +271,24 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
 
+        {/* Content 8 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-left"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
-            height: "300px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #e2e8f0",
           }}
-          date={
-            <img
-              src={photo1} // Replace with your image path
-              alt="LASER CUTTING"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            LASER CUTTING:
-          </h3>
+          <img src={photo2} alt="LASER CUTTING" className="timeline-image" />
+          <h3 className="text-2xl font-bold">LASER CUTTING:</h3>
           <p>
             We use laser cutting for cutting sheet metal ranging from a
             thickness of 0.5mm to 25mm into precise shapes. In this process, the
@@ -304,32 +297,24 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
 
+        {/* Content 9 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-right"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
-            height: "300px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
           }}
-          date={
-            <img
-              src={photo1} // Replace with your image path
-              alt="3D MODELLING"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "#fed7aa",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            3D MODELLING:
-          </h3>
+          <img src={photo3} alt="3D MODELLING" className="timeline-image" />
+          <h3 className="text-2xl font-bold">3D MODELLING:</h3>
           <p>
             Our CAD designers use advanced modelling software to generate 3D
             models of the components and assemble them to check for any errors
@@ -339,32 +324,24 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
 
+        {/* Content 10 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work"
+          className="vertical-timeline-element--work timeline-left"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
-            height: "300px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #e2e8f0",
           }}
-          date={
-            <img
-              src={photo1} // Replace with your image path
-              alt="3D PRINTING"
-              className="w-[500px] h-[290px] object-cover"
-            />
-          }
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
           }}
           icon={<StarIcon />}
         >
-          <h3 className="vertical-timeline-element-title text-2xl font-bold">
-            3D PRINTING:
-          </h3>
+          <img src={photo1} alt="3D PRINTING" className="timeline-image" />
+          <h3 className="text-2xl font-bold">3D PRINTING:</h3>
           <p>
             3D printing, or additive manufacturing, is the construction of a 3D
             object from a CAD model. It can be done in a variety of processes
@@ -374,11 +351,6 @@ const Timeline = () => {
             printing to manufacture cutting-edge designs.
           </p>
         </VerticalTimelineElement>
-
-        <VerticalTimelineElement
-          iconStyle={{ background: "rgb(16, 204, 82)", color: "black" }}
-          icon={<StarIcon />}
-        />
       </VerticalTimeline>
     </section>
   );
