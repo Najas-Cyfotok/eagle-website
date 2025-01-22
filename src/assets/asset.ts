@@ -250,7 +250,7 @@ export const manufacturingProcess = [
   },
   {
     id: 5,
-    title: "Ppowder coating",
+    title: "Powder coating",
     des: "Powder coating is a finishing process used to apply a protective and decorative coating to metal surfaces. Unlike traditional liquid paint, powder coating involves applying a dry powder that is then cured under heat to form a durable finish.",
     img: manufactor3,
     logo: logoFlip,
