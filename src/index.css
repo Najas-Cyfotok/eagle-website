@@ -74,15 +74,18 @@ body {
 
 @layer base {
   html,
-  section {
+  section,
+  #VerticalTimelineElement {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
   }
-  section {
+  section,
+  #VerticalTimelineElement {
     scroll-snap-align: start;
   }
   html,
-  section {
+  section,
+  #VerticalTimelineElement {
     transition: scroll-position 0.1s ease-out;
   }
 }

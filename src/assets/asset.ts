@@ -58,7 +58,7 @@ export const Products = [
     properties: [],
     link: "pipe-adapters",
     class:
-      "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-44",
+      "hover:scale-110  transition duration-300  scale-100 mt-6 w-auto h-44",
   },
   {
     id: 2,
@@ -71,7 +71,7 @@ export const Products = [
     properties: [],
     link: "expander-bush",
     class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto h-28 mt-24",
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-28 mt-12",
   },
   {
     id: 3,
@@ -93,7 +93,7 @@ export const Products = [
     properties: [],
     link: "reducers",
     class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto h-36 mt-16",
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-36 mt-10",
   },
   {
     id: 4,
@@ -106,7 +106,7 @@ export const Products = [
     properties: [],
     link: "foot-valves",
     class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto h-36 mt-16",
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-36 mt-10",
   },
   {
     id: 5,
@@ -119,7 +119,7 @@ export const Products = [
     properties: ["CNC Threaded", "Rust Free"],
     link: "expanders",
     class:
-      "hover:scale-110  transition duration-300  scale-100 mt-12 w-auto h-40",
+      "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-40",
   },
   {
     id: 6,
@@ -132,7 +132,7 @@ export const Products = [
     grades: "",
     link: "hose-nipple",
     class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto h-44 mt-8",
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-44 mt-6",
   },
   {
     id: 7,
@@ -145,7 +145,7 @@ export const Products = [
     grades: "",
     link: "super-heavy-adapters",
     class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto h-52 mt-0",
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-52 mt-2",
   },
   {
     id: 8,
@@ -158,7 +158,7 @@ export const Products = [
     properties: ["CNC thread", "Cable Slot", "Rope Slot", "Nitrile O'Ring"],
     link: "cast-iron-adapters",
     class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto h-44 mt-8",
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-44 mt-6",
   },
   {
     id: 9,
@@ -176,7 +176,7 @@ export const Products = [
     ],
     link: "ferrule-fcv-nrv",
     class:
-      "hover:scale-110  transition duration-300  scale-100 mt-12 w-auto h-40",
+      "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-40",
   },
   {
     id: 10,
@@ -189,7 +189,7 @@ export const Products = [
     properties: [],
     link: "pump-adapters",
     class:
-      "hover:scale-110  transition duration-300  scale-100 mt-12 w-auto h-40",
+      "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-40",
   },
   {
     id: 11,
@@ -202,7 +202,7 @@ export const Products = [
     properties: [],
     link: "reducer-bush",
     class:
-      "hover:scale-110 top-10  transition duration-300 scale-100 w-auto h-28 mt-24",
+      "hover:scale-110 top-10  transition duration-300 scale-100 w-auto h-28 mt-12",
   },
   {
     id: 12,
@@ -215,7 +215,7 @@ export const Products = [
     properties: [],
     link: "rope-collar",
     class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto hover:scale-90 scale-75 mt-[90px]",
+      "hover:scale-110  transition duration-300  scale-100 w-auto hover:scale-90 scale-75 mt-[40px]",
   },
 ];
 

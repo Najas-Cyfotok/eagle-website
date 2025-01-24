@@ -10,7 +10,7 @@ import photo3 from "../../assets/manufactor/power-coating.png";
 
 const Timeline = () => {
   return (
-    <section>
+    <main>
       <style>
         {`
           .timeline-image {
@@ -74,8 +74,10 @@ const Timeline = () => {
 
       <VerticalTimeline lineColor="gray">
         {/* Content 1 */}
+
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-right"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-right h-screen flex items-center"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
@@ -86,6 +88,7 @@ const Timeline = () => {
           iconStyle={{
             background: "rgba(231, 148, 103, 0.95)",
             color: "black",
+            top: "160px",
           }}
           icon={<StarIcon />}
         >
@@ -97,11 +100,16 @@ const Timeline = () => {
             manufacture of patterns and core boxes, and the prototype
             manufacturing time and cost are reduced drastically.
           </p>
+          <button className="border border-black bg-slate-50 p-2 mt-5">
+            Get your Quote
+          </button>
         </VerticalTimelineElement>
 
         {/* Content 2 */}
+
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-left"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-left h-screen flex flex-row-reverse items-center"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
@@ -112,6 +120,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
+            top: "160px",
           }}
           icon={<StarIcon />}
         >
@@ -133,7 +142,8 @@ const Timeline = () => {
 
         {/* Content 3 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-right"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-right h-screen flex  items-center"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
@@ -144,6 +154,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
+            top: "150px",
           }}
           icon={<StarIcon />}
         >
@@ -162,7 +173,8 @@ const Timeline = () => {
 
         {/* Content 4 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-left"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-left h-screen flex flex-row-reverse items-center"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
@@ -173,6 +185,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
+            top: "140px",
           }}
           icon={<StarIcon />}
         >
@@ -192,7 +205,8 @@ const Timeline = () => {
 
         {/* Content 5 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-right"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-right h-screen flex items-center"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
@@ -203,6 +217,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
+            top: "170px",
           }}
           icon={<StarIcon />}
         >
@@ -219,7 +234,8 @@ const Timeline = () => {
 
         {/* Content 6 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-left"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-left h-screen flex flex-row-reverse items-center"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
@@ -230,6 +246,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
+            top: "150px",
           }}
           icon={<StarIcon />}
         >
@@ -247,7 +264,8 @@ const Timeline = () => {
 
         {/* Content 7 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-right"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-right h-screen flex items-center"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
@@ -258,6 +276,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
+            top: "185px",
           }}
           icon={<StarIcon />}
         >
@@ -273,7 +292,8 @@ const Timeline = () => {
 
         {/* Content 8 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-left"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-left h-screen flex flex-row-reverse items-center"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
@@ -284,6 +304,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
+            top: "180px",
           }}
           icon={<StarIcon />}
         >
@@ -299,7 +320,8 @@ const Timeline = () => {
 
         {/* Content 9 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-right"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-right h-screen flex items-center"
           contentStyle={{
             background: "#fed7aa",
             color: "black",
@@ -310,6 +332,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
+            top: "170px",
           }}
           icon={<StarIcon />}
         >
@@ -326,7 +349,8 @@ const Timeline = () => {
 
         {/* Content 10 */}
         <VerticalTimelineElement
-          className="vertical-timeline-element--work timeline-left"
+          id="VerticalTimelineElement"
+          className="vertical-timeline-element--work timeline-left h-screen flex flex-row-reverse items-center"
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
@@ -337,6 +361,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
+            top: "150px",
           }}
           icon={<StarIcon />}
         >
@@ -352,7 +377,7 @@ const Timeline = () => {
           </p>
         </VerticalTimelineElement>
       </VerticalTimeline>
-    </section>
+    </main>
   );
 };
 
