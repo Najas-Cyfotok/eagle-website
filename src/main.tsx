@@ -7,13 +7,16 @@ import Header from "./components/header.tsx";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/footer.tsx";
 
+import { ToastContainer } from "react-toastify";
+
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <Container>
       <BrowserRouter>
         <Header />
         <App />
-        <Footer/>
+        <Footer />
+        <ToastContainer />
       </BrowserRouter>
     </Container>
   </StrictMode>

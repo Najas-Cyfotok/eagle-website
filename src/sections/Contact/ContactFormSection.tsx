@@ -1,7 +1,10 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { toast } from "react-toastify";
+
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
     firstName: "",
@@ -11,16 +14,20 @@ const ContactFormSection = () => {
     message: "",
   });
 
-  const handleChange = (e: any) => {
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    setFormData({ ...formData, [name]: value });
   };
 
-  const sendEmail = (e: any) => {
+  const sendEmail = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
 
     const templateParams = {
       firstName: formData.firstName,
@@ -30,47 +37,46 @@ const ContactFormSection = () => {
       message: formData.message,
     };
 
-    emailjs
-      .send(
-        "service_zt4h6jd", // Your Service ID
-        "template_ybnk1hm", // Your Template ID
-        templateParams, // Mapped template variables
-        "ceU1zJoScDkS-f0si" // Your Public Key
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          alert("Message sent successfully!");
-          // Clear form after successful submission
-          setFormData({
-            firstName: "",
-            lastName: "",
-            email: "",
-            phone: "",
-            message: "",
-          });
-        },
-        (error) => {
-          console.log("FAILED...", error);
-          alert("Failed to send message, please try again later.");
-        }
+    try {
+      await emailjs.send(
+        "service_pm8p1as", // Your updated Service ID
+        "template_m4hexb4", // Your updated Template ID
+        templateParams,
+        "4W8m0TdbkSG1E0xsG" // Your updated Public Key
       );
+
+      toast.success("Message sent successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Email send failed:", error);
+      toast.error("Failed to send the message. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
+
   return (
     <section className="flex justify-center gap-4 items-center my-10 min-h-[50vh] max-[1099px]:flex-col-reverse px-3">
-      <div className="w-1/2 flex justify-center max-md:w-full  ">
+      {/* Form Section */}
+      <div className="w-1/2 flex justify-center max-md:w-full">
         <form
           onSubmit={sendEmail}
-          className="px-8 py-8 bg-orange-300 rounded-md flex flex-col gap-2 md:flex-row md:flex-wrap max-sm:flex-nowrap"
+          className="px-8 py-8 bg-orange-300 rounded-md flex flex-col gap-4 w-full max-w-[600px]"
         >
-          <div className="flex gap-2 w-full ">
+          <div className="flex flex-wrap gap-4">
             <input
               required
               type="text"
               name="firstName"
               value={formData.firstName}
               onChange={handleChange}
-              className="px-2 py-1 text-black rounded-lg border-2 outline-none w-full"
+              className="px-4 py-2 text-black rounded-lg border-2 outline-none flex-1"
               placeholder="First Name"
             />
             <input
@@ -79,7 +85,7 @@ const ContactFormSection = () => {
               name="lastName"
               value={formData.lastName}
               onChange={handleChange}
-              className="px-2 py-1 text-black rounded-lg border-2 outline-none w-full"
+              className="px-4 py-2 text-black rounded-lg border-2 outline-none flex-1"
               placeholder="Last Name"
             />
           </div>
@@ -89,50 +95,57 @@ const ContactFormSection = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="px-2 py-1 text-black rounded-lg border-2 outline-none w-full"
+            className="px-4 py-2 text-black rounded-lg border-2 outline-none w-full"
             placeholder="Email"
           />
           <input
             required
-            type="number"
+            type="tel"
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            className="px-2 py-1 text-black rounded-lg border-2 outline-none w-full"
+            className="px-4 py-2 text-black rounded-lg border-2 outline-none w-full"
             placeholder="Phone Number"
           />
           <textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
-            className="px-2 py-1 text-black rounded-lg border-2 outline-none w-full"
-            placeholder="Message"
+            required
             rows={5}
+            className="px-4 py-2 text-black rounded-lg border-2 outline-none w-full"
+            placeholder="Message"
           />
-
-          <Button className="bg-orange-600 hover:bg-orange-500">Submit</Button>
+          <Button
+            type="submit"
+            disabled={loading}
+            className="bg-orange-600 hover:bg-orange-500"
+          >
+            {loading ? "Sending..." : "Submit"}
+          </Button>
         </form>
       </div>
+
+      {/* Contact Information Section */}
       <div className="w-1/2 max-w-[400px] max-md:w-full">
         <h2 className="text-4xl font-bold">Let's Connect</h2>
         <p className="text-lg mt-4">
-          Questions, comments, or suggestions? Simply fill in the form and we’ll
-          be in touch shortly.
+          Questions, comments, or suggestions? Simply fill in the form, and
+          we’ll be in touch shortly.
         </p>
-        <div className="text-lg mt-4 flex  gap-2">
-          <MapPin className="w-12 h-12 text-orange-600" />{" "}
+        <div className="text-lg mt-4 flex gap-2">
+          <MapPin className="w-6 h-6 text-orange-600" />
           <p>
             No: 23, Lakshmi Nagar, Vadavalli Road, Edayarpalayam, Coimbatore
             641025
           </p>
         </div>
-        <div className="text-lg mt-4 flex  gap-2">
-          <Phone className="w-6 h-6 text-orange-600" />{" "}
+        <div className="text-lg mt-4 flex gap-2">
+          <Phone className="w-6 h-6 text-orange-600" />
           <p className="text-sm font-semibold">7395889955, 7395889922</p>
         </div>
-
-        <div className="text-lg mt-4 flex  gap-2">
-          <Mail className="w-6 h-6 text-orange-600" />{" "}
+        <div className="text-lg mt-4 flex gap-2">
+          <Mail className="w-6 h-6 text-orange-600" />
           <p className="text-sm font-semibold">info@epfv.in</p>
         </div>
       </div>
