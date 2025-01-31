@@ -8,68 +8,88 @@ import {
   VerticalTimelineElement,
 } from "react-vertical-timeline-component";
 import "react-vertical-timeline-component/style.min.css";
-import photo1 from "../../assets/manufactor/shell-moulding.png";
-import photo2 from "../../assets/manufactor/co2-moulding.png";
-import photo3 from "../../assets/manufactor/power-coating.png";
+import photo1 from "../../assets/manufactor/Speed_cast.jpg";
+import photo2 from "../../assets/manufactor/Induction-Melting.jpg";
+import photo3 from "../../assets/manufactor/Shell_Moulding.jpg";
+import photo4 from "../../assets/manufactor/CO2_Moulding.jpg";
+import photo6 from "../../assets/manufactor/powder-coatings.jpg";
+import photo7 from "../../assets/manufactor/laser.jpg";
+import photo8 from "../../assets/manufactor/Laser_Cutting.webp";
+import photo9 from "../../assets/manufactor/3D_Modelling.png";
+import photo10 from "../../assets/manufactor/3D_Printing.avif";
+import { XIcon } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
 const Timeline = () => {
-  /**
-   * State for showing/hiding the modal
-   */
+  // State for showing modal
   const [showModal, setShowModal] = useState(false);
-  /**
-   * State for the form data
-   */
+
+  // Form Data State
   const [formData, setFormData] = useState({
-    name: "",
+    company: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
+    projectTitle: "",
     message: "",
+    driveLink: "",
   });
 
+  // Checkbox state
+  const [isHuman, setIsHuman] = useState(false);
+
   /**
-   * Handles the input change for the form
-   * @param {React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>} e
+   * Handles input changes in the form
    */
   const handleInputChange = (
-    e:
-      | React.ChangeEvent<HTMLInputElement>
-      | React.ChangeEvent<HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   /**
-   * Handles the form submission
-   * @param {React.FormEvent<HTMLFormElement>} e
+   * Handles form submission
    */
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
+    if (!isHuman) {
+      toast.error("Please confirm you are not a robot!");
+      return;
+    }
+
     try {
       await emailjs.send(
-        "service_pm8p1as", // Your service ID
-        "template_j9bonsv", // Your template ID
+        "service_pm8p1as", // Your EmailJS Service ID
+        "template_j9bonsv", // Your EmailJS Template ID
         {
-          name: formData.name,
+          company: formData.company,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
           email: formData.email,
           phone: formData.phone,
+          projectTitle: formData.projectTitle,
           message: formData.message,
+          driveLink: formData.driveLink, // Google Drive link instead of file
         },
-        "4W8m0TdbkSG1E0xsG" // Your public key
+        "4W8m0TdbkSG1E0xsG" // Your EmailJS Public Key
       );
 
-      // alert("Your quote request has been sent successfully!");
       toast.success("Your quote request has been sent successfully!");
       setShowModal(false);
       setFormData({
-        name: "",
+        company: "",
+        firstName: "",
+        lastName: "",
         email: "",
         phone: "",
+        projectTitle: "",
         message: "",
+        driveLink: "",
       });
+      setIsHuman(false);
     } catch (error) {
       console.error("Error sending email:", error);
       toast.error("Failed to send quote request. Please try again.");
@@ -167,7 +187,7 @@ const Timeline = () => {
           </p>
           <button
             onClick={() => setShowModal(true)}
-            className="border border-black bg-slate-50 p-2 mt-5"
+            className="border border-black bg-slate-100 p-2 mt-5 rounded-lg text-xs w-32"
           >
             Get your Quote
           </button>
@@ -187,7 +207,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
-            top: "160px",
+            top: "200px",
           }}
           icon={<StarIcon />}
         >
@@ -219,7 +239,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
-            top: "150px",
+            top: "200px",
           }}
           icon={<StarIcon />}
         >
@@ -250,7 +270,7 @@ const Timeline = () => {
           }}
           icon={<StarIcon />}
         >
-          <img src={photo1} alt="CO2 MOULDING" className="timeline-image" />
+          <img src={photo4} alt="CO2 MOULDING" className="timeline-image" />
           <h3 className="text-2xl font-bold">CO2 MOULDING:</h3>
           <p>
             The CO2 or carbon dioxide moulding process: a predetermined
@@ -311,7 +331,7 @@ const Timeline = () => {
           }}
           icon={<StarIcon />}
         >
-          <img src={photo3} alt="POWDER COATING" className="timeline-image" />
+          <img src={photo6} alt="POWDER COATING" className="timeline-image" />
           <h3 className="text-2xl font-bold">POWDER COATING:</h3>
           <p>
             Powder coating is a surface finishing process that uses a dry powder
@@ -337,11 +357,11 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
-            top: "185px",
+            top: "190px",
           }}
           icon={<StarIcon />}
         >
-          <img src={photo1} alt="LASER ENGRAVING" className="timeline-image" />
+          <img src={photo7} alt="LASER ENGRAVING" className="timeline-image" />
           <h3 className="text-2xl font-bold">LASER ENGRAVING:</h3>
           <p>
             Laser engraving vaporizes materials into fumes to a very shallow
@@ -369,7 +389,7 @@ const Timeline = () => {
           }}
           icon={<StarIcon />}
         >
-          <img src={photo2} alt="LASER CUTTING" className="timeline-image" />
+          <img src={photo8} alt="LASER CUTTING" className="timeline-image" />
           <h3 className="text-2xl font-bold">LASER CUTTING:</h3>
           <p>
             We use laser cutting for cutting sheet metal ranging from a
@@ -397,7 +417,7 @@ const Timeline = () => {
           }}
           icon={<StarIcon />}
         >
-          <img src={photo3} alt="3D MODELLING" className="timeline-image" />
+          <img src={photo9} alt="3D MODELLING" className="timeline-image" />
           <h3 className="text-2xl font-bold">3D MODELLING:</h3>
           <p>
             Our CAD designers use advanced modelling software to generate 3D
@@ -426,7 +446,7 @@ const Timeline = () => {
           }}
           icon={<StarIcon />}
         >
-          <img src={photo1} alt="3D PRINTING" className="timeline-image" />
+          <img src={photo10} alt="3D PRINTING" className="timeline-image" />
           <h3 className="text-2xl font-bold">3D PRINTING:</h3>
           <p>
             3D printing, or additive manufacturing, is the construction of a 3D
@@ -439,29 +459,56 @@ const Timeline = () => {
         </VerticalTimelineElement>
       </VerticalTimeline>
 
-      {/* Modal for "Get Your Quote" */}
       {showModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg w-[90%] max-w-lg p-6">
+          <div className="bg-white rounded-lg w-[90%] max-w-lg p-6 relative">
+            {" "}
+            {/* added relative positioning */}
+            {/* Close button in top-right corner */}
+            <button
+              onClick={() => setShowModal(false)}
+              className="absolute top-2 right-2 text-gray-600 hover:text-gray-800 p-2"
+            >
+              <XIcon size={24} />
+            </button>
             <h2 className="text-2xl font-bold mb-4">Request a Quote</h2>
             <form onSubmit={handleFormSubmit} className="space-y-4">
               <input
-                id="name"
                 type="text"
-                name="name"
-                value={formData.name}
+                name="company"
+                value={formData.company}
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
-                placeholder="Your Name"
+                placeholder="Company Name *"
                 required
               />
+              <div className="flex space-x-2">
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleInputChange}
+                  className="w-1/2 border rounded p-2"
+                  placeholder="First Name *"
+                  required
+                />
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleInputChange}
+                  className="w-1/2 border rounded p-2"
+                  placeholder="Last Name *"
+                  required
+                />
+              </div>
               <input
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
-                placeholder="Your Email"
+                placeholder="Your Email *"
                 required
               />
               <input
@@ -470,7 +517,16 @@ const Timeline = () => {
                 value={formData.phone}
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
-                placeholder="Your Phone Number"
+                placeholder="Phone *"
+                required
+              />
+              <input
+                type="text"
+                name="projectTitle"
+                value={formData.projectTitle}
+                onChange={handleInputChange}
+                className="w-full border rounded p-2"
+                placeholder="Project Title *"
                 required
               />
               <textarea
@@ -478,25 +534,36 @@ const Timeline = () => {
                 value={formData.message}
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
-                placeholder="Your Message"
-                rows={5}
-                required
+                placeholder="Message"
+                rows={4}
               ></textarea>
-              <div className="flex justify-end space-x-4">
-                <button
-                  type="button"
-                  onClick={() => setShowModal(false)}
-                  className="px-4 py-2 border rounded bg-gray-200 hover:bg-gray-300"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="px-4 py-2 border rounded bg-orange-500 text-white hover:bg-orange-600"
-                >
-                  Submit
-                </button>
+
+              {/* Google Drive Link */}
+              <input
+                type="text"
+                name="driveLink"
+                value={formData.driveLink}
+                onChange={handleInputChange}
+                className="w-full border rounded p-2"
+                placeholder="Enter Google Drive link to the file"
+              />
+
+              <div className="flex items-center">
+                <input
+                  type="checkbox"
+                  checked={isHuman}
+                  onChange={() => setIsHuman(!isHuman)}
+                  className="mr-2"
+                />
+                <span>I am not a robot</span>
               </div>
+
+              <button
+                type="submit"
+                className="w-full bg-orange-500 text-white p-2 rounded"
+              >
+                Submit
+              </button>
             </form>
           </div>
         </div>
