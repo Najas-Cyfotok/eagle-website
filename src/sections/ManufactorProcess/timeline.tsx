@@ -12,6 +12,8 @@ import photo1 from "../../assets/manufactor/Speed_cast.jpg";
 import photo2 from "../../assets/manufactor/Induction-Melting.jpg";
 import photo3 from "../../assets/manufactor/Shell_Moulding.jpg";
 import photo4 from "../../assets/manufactor/CO2_Moulding.jpg";
+import photo5 from "../../assets/manufactor/cnc-machining.png";
+
 import photo6 from "../../assets/manufactor/powder-coatings.jpg";
 import photo7 from "../../assets/manufactor/laser.jpg";
 import photo8 from "../../assets/manufactor/Laser_Cutting.webp";
@@ -302,7 +304,7 @@ const Timeline = () => {
           }}
           icon={<StarIcon />}
         >
-          <img src={photo2} alt="CNC MACHINING" className="timeline-image" />
+          <img src={photo5} alt="CNC MACHINING" className="timeline-image" />
           <h3 className="text-2xl font-bold">CNC MACHINING:</h3>
           <p>
             CNC machining is a metal removal process that uses different kinds
@@ -472,7 +474,7 @@ const Timeline = () => {
               <XIcon size={24} />
             </button>
             <h2 className="text-2xl font-bold mb-4">Request a Quote</h2>
-            <form onSubmit={handleFormSubmit} className="space-y-4">
+            <form onSubmit={handleFormSubmit} className="space-y-2">
               <input
                 type="text"
                 name="company"
@@ -535,7 +537,7 @@ const Timeline = () => {
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
                 placeholder="Message"
-                rows={4}
+                rows={3}
               ></textarea>
 
               {/* Google Drive Link */}
