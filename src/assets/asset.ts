@@ -53,7 +53,7 @@ export const Products = [
     imageUrl: p5,
     description:
       "The Pipe adapters (Top adapters) is used for  connecting top most column pipe to the discharge fitting/discharge bend",
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
+    sizes: ["1”", "1¼”", "1½”", "2”"],
     grades: "304 & Cast Iron",
     properties: [],
     link: "pipe-adapters",
@@ -66,7 +66,7 @@ export const Products = [
     imageUrl: p1,
     description:
       "Super heavy adapters ensures withstand of substantial loads and stresses, making them suitable for heavy-duty applications. These adapters are designed to distribute loads evenly across the column pipe and the connected elements. This helps in preventing localized stress concentrations that could lead to structural failure.",
-    sizes: ["1¼”", "1½”", "2”"],
+    sizes: ["1¼”X1½”", "1½”X2”"],
     grades: "",
     properties: [],
     link: "expander-bush",
@@ -79,16 +79,7 @@ export const Products = [
     imageUrl: p2,
     description:
       "Reducers are designed with ACME thread to ensure proper gripping & there is no chance of column slippage during installation & removal of pumps.",
-    sizes: [
-      "1¼”x1”",
-      "1½”x1¼”",
-      "1¼”x1½”",
-      "1½”x2”",
-      "2”x1½”",
-      "2½”x2”",
-      "4”x3”",
-      "5”x4”",
-    ],
+    sizes: ["1¼”x1”", "1½”x1¼”", "2”x1½”", "2½”x2”"],
     grades: "304 & Cast Iron",
     properties: [],
     link: "reducers",
@@ -128,7 +119,7 @@ export const Products = [
     description:
       "Stainless steel hose nipples are mainly used for connecting HDPE pipes with pumps. Particularly in applications involving Submersible and open-well pumps. EAGLE Hose nipples are designed to secure the connection with a secured precision CNC-finished thread.",
     properties: [],
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”"],
+    sizes: ["1”", "1¼”", "1½”"],
     grades: "",
     link: "hose-nipple",
     class:
@@ -184,7 +175,7 @@ export const Products = [
     imageUrl: p11,
     description:
       "The bottom adapter is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for 100% accuracy.",
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”"],
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”"],
     grades: "304 & Cast Iron",
     properties: [],
     link: "pump-adapters",
@@ -197,7 +188,7 @@ export const Products = [
     imageUrl: p12,
     description:
       "A reducer bush is used to connect pipes of different diameters, typically transitioning from a larger to a smaller diameter. This is crucial in systems where different pipe sizes need to be integrated without causing flow disruption.",
-    sizes: ["1¼”X1", "1½”X11¼", "2”X1½”"],
+    sizes: ["1¼”X1”", "1½”X1”", "1½”X11¼", "2”X1½”"],
     grades: "",
     properties: [],
     link: "reducer-bush",
