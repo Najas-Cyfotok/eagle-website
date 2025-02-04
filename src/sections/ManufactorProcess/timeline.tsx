@@ -22,13 +22,14 @@ import photo10 from "../../assets/manufactor/3D_Printing.avif";
 import { XIcon } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import axios from "axios";
 
 const Timeline = () => {
   // State for showing modal
   const [showModal, setShowModal] = useState(false);
 
   // Form Data State
-  const [formData, setFormData] = useState({
+  const [form, setForm] = useState({
     company: "",
     firstName: "",
     lastName: "",
@@ -39,8 +40,11 @@ const Timeline = () => {
     driveLink: "",
   });
 
+  const [file,setFile] = useState(null)
+  // const [uploadUrl, setUploadUrl] = useState("");
   // Checkbox state
   const [isHuman, setIsHuman] = useState(false);
+
 
   /**
    * Handles input changes in the form
@@ -48,40 +52,59 @@ const Timeline = () => {
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setForm({ ...form, [e.target.name]: e.target.value });
   };
 
   /**
    * Handles form submission
    */
+  const handleFileChange = (event: any) => {
+    setFile(event.target.files[0]);
+  };
+
+
+  //cloudinary add 
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    if (!isHuman) {
-      toast.error("Please confirm you are not a robot!");
-      return;
-    }
-
+  
+    if (!file) return alert("Please Select a file");
+    if (!isHuman) return alert("Please Verify");
+  
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("upload_preset", "eagle-file-upload"); // Ensure this preset exists in Cloudinary
+  
     try {
+      const response = await axios.post(
+        "https://api.cloudinary.com/v1_1/diajo7me6/upload",
+        formData // <-- Add formData here
+      );
+  
+      const fileUrl = response.data.secure_url;
+      console.log("File URL:", fileUrl);
+  
+      // setUploadUrl(fileUrl);
+  
+      // Sending email details
       await emailjs.send(
         "service_pm8p1as", // Your EmailJS Service ID
         "template_j9bonsv", // Your EmailJS Template ID
         {
-          company: formData.company,
-          firstName: formData.firstName,
-          lastName: formData.lastName,
-          email: formData.email,
-          phone: formData.phone,
-          projectTitle: formData.projectTitle,
-          message: formData.message,
-          driveLink: formData.driveLink, // Google Drive link instead of file
+          company: form.company,
+          firstName: form.firstName,
+          lastName: form.lastName,
+          email: form.email,
+          phone: form.phone,
+          projectTitle: form.projectTitle,
+          message: form.message,
+          driveLink: fileUrl, // Use Cloudinary URL instead of Drive Link
         },
         "4W8m0TdbkSG1E0xsG" // Your EmailJS Public Key
       );
-
+  
       toast.success("Your quote request has been sent successfully!");
       setShowModal(false);
-      setFormData({
+      setForm({
         company: "",
         firstName: "",
         lastName: "",
@@ -97,6 +120,51 @@ const Timeline = () => {
       toast.error("Failed to send quote request. Please try again.");
     }
   };
+  
+
+  // const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+
+  //   if (!isHuman) {
+  //     toast.error("Please confirm you are not a robot!");
+  //     return;
+  //   }
+
+  //   try {
+      // await emailjs.send(
+      //   "service_pm8p1as", // Your EmailJS Service ID
+      //   "template_j9bonsv", // Your EmailJS Template ID
+      //   {
+      //     company: form.company,
+      //     firstName: form.firstName,
+      //     lastName: form.lastName,
+      //     email: form.email,
+      //     phone: form.phone,
+      //     projectTitle: form.projectTitle,
+      //     message: form.message,
+      //     driveLink: form.driveLink, // Google Drive link instead of file
+      //   },
+      //   "4W8m0TdbkSG1E0xsG" // Your EmailJS Public Key
+      // );
+
+      // toast.success("Your quote request has been sent successfully!");
+      // setShowModal(false);
+      // setForm({
+      //   company: "",
+      //   firstName: "",
+      //   lastName: "",
+      //   email: "",
+      //   phone: "",
+      //   projectTitle: "",
+      //   message: "",
+      //   driveLink: "",
+      // });
+      // setIsHuman(false);
+  //   } catch (error) {
+      // console.error("Error sending email:", error);
+      // toast.error("Failed to send quote request. Please try again.");
+  //   }
+  // };
 
   return (
     <main>
@@ -478,7 +546,7 @@ const Timeline = () => {
               <input
                 type="text"
                 name="company"
-                value={formData.company}
+                value={form.company}
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
                 placeholder="Company Name *"
@@ -488,7 +556,7 @@ const Timeline = () => {
                 <input
                   type="text"
                   name="firstName"
-                  value={formData.firstName}
+                  value={form.firstName}
                   onChange={handleInputChange}
                   className="w-1/2 border rounded p-2"
                   placeholder="First Name *"
@@ -497,7 +565,7 @@ const Timeline = () => {
                 <input
                   type="text"
                   name="lastName"
-                  value={formData.lastName}
+                  value={form.lastName}
                   onChange={handleInputChange}
                   className="w-1/2 border rounded p-2"
                   placeholder="Last Name *"
@@ -507,7 +575,7 @@ const Timeline = () => {
               <input
                 type="email"
                 name="email"
-                value={formData.email}
+                value={form.email}
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
                 placeholder="Your Email *"
@@ -516,7 +584,7 @@ const Timeline = () => {
               <input
                 type="tel"
                 name="phone"
-                value={formData.phone}
+                value={form.phone}
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
                 placeholder="Phone *"
@@ -525,7 +593,7 @@ const Timeline = () => {
               <input
                 type="text"
                 name="projectTitle"
-                value={formData.projectTitle}
+                value={form.projectTitle}
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
                 placeholder="Project Title *"
@@ -533,7 +601,7 @@ const Timeline = () => {
               />
               <textarea
                 name="message"
-                value={formData.message}
+                value={form.message}
                 onChange={handleInputChange}
                 className="w-full border rounded p-2"
                 placeholder="Message"
@@ -542,10 +610,10 @@ const Timeline = () => {
 
               {/* Google Drive Link */}
               <input
-                type="text"
-                name="driveLink"
-                value={formData.driveLink}
-                onChange={handleInputChange}
+                type="file"
+                // name="driveLink"
+                // value={formData.driveLink}
+                onChange={handleFileChange}
                 className="w-full border rounded p-2"
                 placeholder="Enter Google Drive link to the file"
               />
