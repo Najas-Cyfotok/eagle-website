@@ -40,11 +40,10 @@ const Timeline = () => {
     driveLink: "",
   });
 
-  const [file,setFile] = useState(null)
-  // const [uploadUrl, setUploadUrl] = useState("");
+  const [file, setFile] = useState(null);
+  const [uploadUrl, setUploadUrl] = useState("");
   // Checkbox state
   const [isHuman, setIsHuman] = useState(false);
-
 
   /**
    * Handles input changes in the form
@@ -59,32 +58,42 @@ const Timeline = () => {
    * Handles form submission
    */
   const handleFileChange = (event: any) => {
-    setFile(event.target.files[0]);
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      const maxSize = 10 * 1024 * 1024; // 10MB in bytes
+
+      if (selectedFile.size > maxSize) {
+        toast.error("File size exceeds 10MB. Please upload a smaller file.");
+        setFile(null); // Reset file state
+        return;
+      }
+
+      setFile(selectedFile);
+    }
   };
 
-
-  //cloudinary add 
+  //cloudinary add
   const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  
+
     if (!file) return alert("Please Select a file");
     if (!isHuman) return alert("Please Verify");
-  
+
     const formData = new FormData();
     formData.append("file", file);
-    formData.append("upload_preset", "eagle-file-upload"); // Ensure this preset exists in Cloudinary
-  
+    formData.append("upload_preset", "Eagle-Get-your-quote"); // Ensure this preset exists in Cloudinary
+
     try {
       const response = await axios.post(
-        "https://api.cloudinary.com/v1_1/diajo7me6/upload",
+        "https://api.cloudinary.com/v1_1/djaxm6osi/upload",
         formData // <-- Add formData here
       );
-  
+
       const fileUrl = response.data.secure_url;
       console.log("File URL:", fileUrl);
-  
-      // setUploadUrl(fileUrl);
-  
+
+      setUploadUrl(fileUrl);
+
       // Sending email details
       await emailjs.send(
         "service_pm8p1as", // Your EmailJS Service ID
@@ -101,7 +110,7 @@ const Timeline = () => {
         },
         "4W8m0TdbkSG1E0xsG" // Your EmailJS Public Key
       );
-  
+
       toast.success("Your quote request has been sent successfully!");
       setShowModal(false);
       setForm({
@@ -120,7 +129,6 @@ const Timeline = () => {
       toast.error("Failed to send quote request. Please try again.");
     }
   };
-  
 
   // const handleFormSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   //   e.preventDefault();
@@ -131,38 +139,38 @@ const Timeline = () => {
   //   }
 
   //   try {
-      // await emailjs.send(
-      //   "service_pm8p1as", // Your EmailJS Service ID
-      //   "template_j9bonsv", // Your EmailJS Template ID
-      //   {
-      //     company: form.company,
-      //     firstName: form.firstName,
-      //     lastName: form.lastName,
-      //     email: form.email,
-      //     phone: form.phone,
-      //     projectTitle: form.projectTitle,
-      //     message: form.message,
-      //     driveLink: form.driveLink, // Google Drive link instead of file
-      //   },
-      //   "4W8m0TdbkSG1E0xsG" // Your EmailJS Public Key
-      // );
+  // await emailjs.send(
+  //   "service_pm8p1as", // Your EmailJS Service ID
+  //   "template_j9bonsv", // Your EmailJS Template ID
+  //   {
+  //     company: form.company,
+  //     firstName: form.firstName,
+  //     lastName: form.lastName,
+  //     email: form.email,
+  //     phone: form.phone,
+  //     projectTitle: form.projectTitle,
+  //     message: form.message,
+  //     driveLink: form.driveLink, // Google Drive link instead of file
+  //   },
+  //   "4W8m0TdbkSG1E0xsG" // Your EmailJS Public Key
+  // );
 
-      // toast.success("Your quote request has been sent successfully!");
-      // setShowModal(false);
-      // setForm({
-      //   company: "",
-      //   firstName: "",
-      //   lastName: "",
-      //   email: "",
-      //   phone: "",
-      //   projectTitle: "",
-      //   message: "",
-      //   driveLink: "",
-      // });
-      // setIsHuman(false);
+  // toast.success("Your quote request has been sent successfully!");
+  // setShowModal(false);
+  // setForm({
+  //   company: "",
+  //   firstName: "",
+  //   lastName: "",
+  //   email: "",
+  //   phone: "",
+  //   projectTitle: "",
+  //   message: "",
+  //   driveLink: "",
+  // });
+  // setIsHuman(false);
   //   } catch (error) {
-      // console.error("Error sending email:", error);
-      // toast.error("Failed to send quote request. Please try again.");
+  // console.error("Error sending email:", error);
+  // toast.error("Failed to send quote request. Please try again.");
   //   }
   // };
 
@@ -607,6 +615,7 @@ const Timeline = () => {
                 placeholder="Message"
                 rows={3}
               ></textarea>
+              <label>Upto 10Mb only*</label>
 
               {/* Google Drive Link */}
               <input
@@ -615,7 +624,6 @@ const Timeline = () => {
                 // value={formData.driveLink}
                 onChange={handleFileChange}
                 className="w-full border rounded p-2"
-                placeholder="Enter Google Drive link to the file"
               />
 
               <div className="flex items-center">
@@ -632,7 +640,7 @@ const Timeline = () => {
                 type="submit"
                 className="w-full bg-orange-500 text-white p-2 rounded"
               >
-                Submit
+                {!uploadUrl ? "Submit" : "Uploading..."}
               </button>
             </form>
           </div>

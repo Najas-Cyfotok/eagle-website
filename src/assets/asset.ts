@@ -45,6 +45,9 @@ import p10 from "./products/images/Product_9.png";
 import p11 from "./products/images/Product_2.png";
 import p12 from "./products/images/Product_12.png";
 import p13 from "./products/images/Product_3.png";
+import p14 from "./products/images/Jet_Assembly.png";
+import p15 from "./products/images/hosecollar.png";
+// import p14
 
 export const Products = [
   {
@@ -53,8 +56,8 @@ export const Products = [
     imageUrl: p5,
     description:
       "The Pipe adapters (Top adapters) is used for  connecting top most column pipe to the discharge fitting/discharge bend",
-    sizes: ["1”", "1¼”", "1½”", "2”"],
-    grades: "304 & Cast Iron",
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”", "6”"],
+    grades: "SS 304 & Cast Iron",
     properties: [],
     link: "pipe-adapters",
     class:
@@ -80,7 +83,7 @@ export const Products = [
     description:
       "Reducers are designed with ACME thread to ensure proper gripping & there is no chance of column slippage during installation & removal of pumps.",
     sizes: ["1¼”x1”", "1½”x1¼”", "2”x1½”", "2½”x2”"],
-    grades: "304 & Cast Iron",
+    grades: "SS 304 & Cast Iron",
     properties: [],
     link: "reducers",
     class:
@@ -117,7 +120,7 @@ export const Products = [
     name: "Hose Nipple",
     imageUrl: p6,
     description:
-      "Stainless steel hose nipples are mainly used for connecting HDPE pipes with pumps. Particularly in applications involving Submersible and open-well pumps. EAGLE Hose nipples are designed to secure the connection with a secured precision CNC-finished thread.",
+      "Hose Nipple's application is to hold the Pump and HDPE pipe, this part is made out of Stainless steel grade, precisely CNC machined thread and Serrations for strong Tensile strength.",
     properties: [],
     sizes: ["1”", "1¼”", "1½”"],
     grades: "",
@@ -175,8 +178,8 @@ export const Products = [
     imageUrl: p11,
     description:
       "The bottom adapter is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for 100% accuracy.",
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”"],
-    grades: "304 & Cast Iron",
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”", "6”"],
+    grades: "SS 304 & Cast Iron",
     properties: [],
     link: "pump-adapters",
     class:
@@ -207,6 +210,32 @@ export const Products = [
     link: "rope-collar",
     class:
       "hover:scale-110  transition duration-300  scale-100 w-auto hover:scale-90 scale-75 mt-[40px]",
+  },
+  {
+    id: 12,
+    name: "Jet Assembly",
+    imageUrl: p14,
+    description:
+      "Jet Assembly increases the compressor pump´s water flow continuity and to minimize the water pipes scaling.",
+    sizes: ["1¼”X1”"],
+    grades: "SS 304",
+    properties: ["Rust Free", "Easy To Install", "100% No Welding"],
+    link: "jet-assembly",
+    class:
+      "hover:scale-110  transition duration-300 w-auto hover:scale-75 scale-100 h-36 mt-10",
+  },
+  {
+    id: 13,
+    name: "Hose Collar",
+    imageUrl: p15,
+    description:
+      "Hose Collar's application is to Connect HDPE pipe on both the sides, this part is made out of Stainless steel grade, precisely CNC machined thread and Serrations for strong Tensile strength.",
+    sizes: ["1¼”", "1½”", "2”"],
+    grades: "SS 304",
+    properties: [],
+    link: "hose-collar",
+    class:
+      "hover:scale-110  transition duration-300  scale-75 w-auto hover:scale-90",
   },
 ];
 
