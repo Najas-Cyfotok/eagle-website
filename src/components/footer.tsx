@@ -147,7 +147,7 @@ export const contact = [
   },
   {
     name: "phone",
-    contact: "+91 7395889922,+91 7395889922",
+    contact: "+91 7395889955,+91 7395889922",
     icon: <Phone />,
   },
   {

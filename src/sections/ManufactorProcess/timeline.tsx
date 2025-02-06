@@ -182,8 +182,8 @@ const Timeline = () => {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            width: 350px;
-            height: 220px;
+            width: 450px;
+            height: 300px;
             object-fit: cover;
             border-radius: 8px;
             z-index: 1;
@@ -191,11 +191,11 @@ const Timeline = () => {
           }
 
           .timeline-left .timeline-image {
-            left: -550px;
+            left: -650px;
           }
 
           .timeline-right .timeline-image {
-            right: -550px;
+            right: -650px;
           }
 
           .vertical-timeline-element-content {
@@ -225,7 +225,7 @@ const Timeline = () => {
             .timeline-image {
               position: static;
               width: 70%;
-              height: auto;
+              height: 200px;
               margin: 130px auto 0 auto;
             }
 
@@ -244,6 +244,7 @@ const Timeline = () => {
           contentStyle={{
             background: "#fed7aa",
             color: "black",
+            minHeight: "290px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
@@ -278,6 +279,7 @@ const Timeline = () => {
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
+            minHeight: "280px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #e2e8f0",
@@ -285,7 +287,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
-            top: "200px",
+            top: "160px",
           }}
           icon={<StarIcon />}
         >
@@ -310,6 +312,7 @@ const Timeline = () => {
           contentStyle={{
             background: "#fed7aa",
             color: "black",
+            minHeight: "280px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
@@ -317,7 +320,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
-            top: "200px",
+            top: "160px",
           }}
           icon={<StarIcon />}
         >
@@ -369,6 +372,7 @@ const Timeline = () => {
           contentStyle={{
             background: "#fed7aa",
             color: "black",
+            minHeight: "290px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
@@ -376,7 +380,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
-            top: "170px",
+            top: "150px",
           }}
           icon={<StarIcon />}
         >
@@ -428,6 +432,7 @@ const Timeline = () => {
           contentStyle={{
             background: "#fed7aa",
             color: "black",
+            minHeight: "290px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
@@ -435,7 +440,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
-            top: "190px",
+            top: "150px",
           }}
           icon={<StarIcon />}
         >
@@ -456,6 +461,7 @@ const Timeline = () => {
           contentStyle={{
             background: "#e2e8f0",
             color: "black",
+            minHeight: "290px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #e2e8f0",
@@ -463,7 +469,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#e2e8f0",
             color: "black",
-            top: "180px",
+            top: "160px",
           }}
           icon={<StarIcon />}
         >
@@ -484,6 +490,7 @@ const Timeline = () => {
           contentStyle={{
             background: "#fed7aa",
             color: "black",
+            minHeight: "290px",
           }}
           contentArrowStyle={{
             borderRight: "7px solid  #fed7aa",
@@ -491,7 +498,7 @@ const Timeline = () => {
           iconStyle={{
             background: "#fed7aa",
             color: "black",
-            top: "170px",
+            top: "150px",
           }}
           icon={<StarIcon />}
         >

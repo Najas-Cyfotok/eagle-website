@@ -85,8 +85,7 @@ const Header = () => {
             <li
               key={index}
               className="relative group"
-              onMouseEnter={() => setOpenDropdown(true)}
-              onMouseLeave={() => setOpenDropdown(false)}
+              onClick={() => setOpenDropdown(!openDropdown)}
             >
               <span className="cursor-pointer hover:text-orange-500">
                 {route.name}
