@@ -135,18 +135,31 @@ const ContactFormSection = () => {
         </p>
         <div className="text-lg mt-4 flex gap-2">
           <MapPin className="w-6 h-6 text-orange-600" />
-          <p>
+          <a
+            href="https://maps.google.com/?q=No: 23, Lakshmi Nagar, Vadavalli Road, Edayarpalayam, Coimbatore 641025"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold"
+          >
             No: 23, Lakshmi Nagar, Vadavalli Road, Edayarpalayam, Coimbatore
             641025
-          </p>
+          </a>
         </div>
         <div className="text-lg mt-4 flex gap-2">
           <Phone className="w-6 h-6 text-orange-600" />
-          <p className="text-sm font-semibold">7395889955, 7395889922</p>
+          <a href="tel:+917395889955" className="text-sm font-semibold">
+            7395889955
+          </a>
+          <span>,</span>
+          <a href="tel:+917395889922" className="text-sm font-semibold">
+            7395889922
+          </a>
         </div>
         <div className="text-lg mt-4 flex gap-2">
           <Mail className="w-6 h-6 text-orange-600" />
-          <p className="text-sm font-semibold">info@epfv.in</p>
+          <a href="mailto:info@epfv.in" className="text-sm font-semibold ">
+            info@epfv.in
+          </a>
         </div>
       </div>
     </section>

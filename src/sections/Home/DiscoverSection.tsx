@@ -1,6 +1,7 @@
 import { discoverBG } from "@/assets/asset";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const DiscoverSection = () => {
   return (
@@ -30,11 +31,11 @@ const DiscoverSection = () => {
                 commitment to quality and customer satisfaction remains
                 unmatched.
               </p>
-              <a href="/contact">
+              <Link to="/contact">
                 <Button className="bg-orange-600 hover:bg-orange-500 mt-5">
                   Reach Us
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>
