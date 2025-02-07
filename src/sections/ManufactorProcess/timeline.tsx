@@ -232,6 +232,10 @@ const Timeline = () => {
             .vertical-timeline-element-content {
               text-align: center;
             }
+              .vertical-timeline-element-content h3 {
+              text-align: center;
+              margin-top: -60px; 
+            }
           }
         `}
       </style>

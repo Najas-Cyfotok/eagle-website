@@ -62,13 +62,18 @@ const Footer = () => {
               <h2 className="text-lg font-bold mb-4 ">Contact</h2>
               <ul className="flex flex-col gap-y-2 ">
                 {contact.map((item, index) => (
-                  <li key={index} className="flex">
+                  <li key={index} className="flex items-start gap-2">
                     <span className="text-xs">{item.icon}</span>
-                    <span className="text-xs">
-                      <Link to={`tel:${item.contact}`} target="_blank">
-                        {item.contact}
-                      </Link>
-                    </span>
+                    <div className="text-xs flex flex-wrap md:flex-row flex-col">
+                      {item.contact.split(",").map((num, i, arr) => (
+                        <Link to={`tel:${num.trim()}`} key={i} target="_blank">
+                          {num.trim()}
+                          {i !== arr.length - 1 && (
+                            <span className="hidden md:inline">,</span>
+                          )}
+                        </Link>
+                      ))}
+                    </div>
                   </li>
                 ))}
               </ul>

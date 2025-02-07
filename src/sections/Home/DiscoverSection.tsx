@@ -30,9 +30,11 @@ const DiscoverSection = () => {
                 commitment to quality and customer satisfaction remains
                 unmatched.
               </p>
-              <Button className="bg-orange-600 hover:bg-orange-500 mt-5">
-                Reach Us
-              </Button>
+              <a href="/contact">
+                <Button className="bg-orange-600 hover:bg-orange-500 mt-5">
+                  Reach Us
+                </Button>
+              </a>
             </div>
           </div>
         </motion.div>
