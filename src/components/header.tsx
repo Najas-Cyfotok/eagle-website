@@ -11,18 +11,27 @@ const routes = [
     path: "/products",
     products: [
       { name: "All Products", path: "/products" },
-      { name: "Pipe Adapters", path: "/product/pipe-adapters" },
-      { name: "Expander Bush", path: "/product/expander-bush" },
-      { name: "Reducers", path: "/product/reducers" },
-      { name: "Foot Valve", path: "/product/foot-valves" },
-      { name: "Expanders", path: "/product/expanders" },
-      { name: "Hose Nipple", path: "/product/hose-nipple" },
-      { name: "Super Heavy Adapters", path: "/product/super-heavy-adapters" },
-      { name: "Cast Iron Adapters", path: "/product/cast-iron-adapters" },
-      { name: "Ferrule FCV/NRV", path: "/product/ferrule-fcv-nrv" },
-      { name: "Pump Adapters", path: "/product/pump-adapters" },
-      { name: "Reducer Bush", path: "/product/reducer-bush" },
-      { name: "Rope Collar", path: "/product/rope-collar" },
+      { name: "Hose Nipples (Stainless Steel)", path: "/product/hose-nipple" },
+      { name: "Pipe Adapters (SS 304/CI)", path: "/product/pipe-adapters" },
+      { name: "Hose Collars (Stainless Steel)", path: "/product/hose-collar" },
+      { name: "Pump Adapters (SS 304)", path: "/product/pump-adapters" },
+      { name: "Reducer Bush (SS 304)", path: "/product/reducer-bush" },
+      { name: "Reducers (SS 304)", path: "/product/reducers" },
+      { name: "Expander Bush (SS 304)", path: "/product/expander-bush" },
+      { name: "Expanders (SS 304)", path: "/product/expanders" },
+      { name: "Foot Valve (SS 304)", path: "/product/foot-valves" },
+      {
+        name: "Super Heavy Adapters (SS 304)",
+        path: "/product/super-heavy-adapters",
+      },
+      { name: "Jet Assembly (SS 304)", path: "/product/jet-assembly" },
+      { name: "Cast Iron Adapters (CI)", path: "/product/cast-iron-adapters" },
+
+      {
+        name: "Ferrule FCV/NRV (SS 202/SS 304/SS 316)",
+        path: "/product/ferrule-fcv-nrv",
+      },
+      { name: "Rope Collars (SS 304)", path: "/product/rope-collar" },
     ],
   },
   { name: "Manufacturing Process", path: "/manufacturing-process" },
@@ -91,7 +100,7 @@ const Header = () => {
                 {route.name}
               </span>
               {openDropdown && (
-                <ul className="absolute left-0 mt-2 p-3 bg-white rounded shadow-lg text-black grid grid-cols-2 gap-2 w-[300px]">
+                <ul className="absolute left-0 mt-2 p-3 bg-white rounded shadow-lg text-black grid grid-cols-2 gap-2 w-[350px]">
                   {route.products.map((product, i) => (
                     <li key={i} className="hover:text-orange-500">
                       <Link to={product.path}>{product.name}</Link>

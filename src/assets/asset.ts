@@ -52,10 +52,10 @@ import p15 from "./products/images/hosecollar.png";
 export const Products = [
   {
     id: 1,
-    name: "Pipe Adapters",
+    name: "Pipe Adapters(SS 304/CI)",
     imageUrl: p5,
     description:
-      "The Pipe adapters (Top adapters) is used for  connecting top most column pipe to the discharge fitting/discharge bend",
+      "The Pipe adapters (Top adapters) is used for connecting top most column pipe to the discharge fitting/discharge bend",
     sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”", "6”"],
     grades: "SS 304 & Cast Iron",
     properties: [],
@@ -65,20 +65,20 @@ export const Products = [
   },
   {
     id: 2,
-    name: "Expander Bush",
-    imageUrl: p1,
+    name: "Pump Adapters(SS 304)",
+    imageUrl: p11,
     description:
-      "Super heavy adapters ensures withstand of substantial loads and stresses, making them suitable for heavy-duty applications. These adapters are designed to distribute loads evenly across the column pipe and the connected elements. This helps in preventing localized stress concentrations that could lead to structural failure.",
-    sizes: ["1¼”X1½”", "1½”X2”"],
-    grades: "",
+      "The bottom adapter is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for 100% accuracy.",
+    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”", "6”"],
+    grades: "SS 304 & Cast Iron",
     properties: [],
-    link: "expander-bush",
+    link: "pump-adapters",
     class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto h-28 mt-12",
+      "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-40",
   },
   {
     id: 3,
-    name: "Reducers",
+    name: "Reducers(SS 304)",
     imageUrl: p2,
     description:
       "Reducers are designed with ACME thread to ensure proper gripping & there is no chance of column slippage during installation & removal of pumps.",
@@ -91,20 +91,7 @@ export const Products = [
   },
   {
     id: 4,
-    name: "Foot Valve",
-    imageUrl: p3,
-    description:
-      "Foot Valve is designed with the latest technology incorporating a double guide support for plunger & O-ring is precision fitted to the poppet for a positive seal into the tapered (33˚) self-cleaning valve.",
-    sizes: ["1”", "1½”"],
-    grades: "SS 304",
-    properties: [],
-    link: "foot-valves",
-    class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto h-36 mt-10",
-  },
-  {
-    id: 5,
-    name: "Expanders",
+    name: "Expanders(SS 304)",
     imageUrl: p4,
     description:
       "Expanders are designed to expand the pump discharge connecting the BSP Threaded side to the pump 6 ACME Threaded side to the column pipe.",
@@ -116,34 +103,21 @@ export const Products = [
       "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-40",
   },
   {
-    id: 6,
-    name: "Hose Nipple",
-    imageUrl: p6,
-    description:
-      "Hose Nipple's application is to hold the Pump and HDPE pipe, this part is made out of Stainless steel grade, precisely CNC machined thread and Serrations for strong Tensile strength.",
-    properties: [],
-    sizes: ["1”", "1¼”", "1½”"],
-    grades: "",
-    link: "hose-nipple",
-    class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto h-44 mt-6",
-  },
-  {
-    id: 7,
-    name: "Super Heavy Adapters",
+    id: 5,
+    name: "Super Heavy Adapters(SS 304)",
     imageUrl: p8,
     description:
-      "Super heavy adapters ensures withstand of substantial loads and stresses, making them suitable for heavy-duty applications. These adapters are designed to distribute loads evenly across the column pipe and the connected elements. This helps in preventing localized stress concentrations that could lead to structural failure.",
-    sizes: ["1¼”", "1½”", "2"],
-    properties: [],
+      "Super heavy adapters ensure they withstand substantial loads and stresses, making them suitable for heavy-duty applications.",
+    sizes: ["1¼”", "1½”", "2”"],
     grades: "",
+    properties: [],
     link: "super-heavy-adapters",
     class:
       "hover:scale-110  transition duration-300  scale-100 w-auto h-52 mt-2",
   },
   {
-    id: 8,
-    name: "Cast Iron Adapters",
+    id: 6,
+    name: "Cast Iron Adapters(CI)",
     imageUrl: p9,
     description:
       "Cast Iron Adapters are suitable for low-depth borewells, the outer surface is finished with powder coating for atmospheric protection.",
@@ -155,13 +129,105 @@ export const Products = [
       "hover:scale-110  transition duration-300  scale-100 w-auto h-44 mt-6",
   },
   {
+    id: 7,
+    name: "Rope Collar(SS 304)",
+    imageUrl: p13,
+    description:
+      "Rope Collar is used to secure the pump by connecting ropes at both ends of the Rope Collar.",
+    sizes: ["1¼”", "1½”", "2”"],
+    grades: "SS 304",
+    properties: [],
+    link: "rope-collar",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 w-auto hover:scale-90 scale-75 mt-[40px]",
+  },
+  {
+    id: 8,
+    name: "Hose Nipple (Stainless Steel)",
+    imageUrl: p6,
+    description:
+      "Hose Nipple's application is to hold the Pump and HDPE pipe, made out of Stainless steel grade, precisely CNC machined.",
+    sizes: ["1”", "1¼”", "1½”"],
+    grades: "",
+    properties: [],
+    link: "hose-nipple",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 w-auto h-44 mt-6",
+  },
+  {
     id: 9,
-    name: "Ferrule FCV/NRV",
+    name: "Hose Collar  (Stainless Steel)",
+    imageUrl: p15,
+    description:
+      "Hose Collar is used to Connect HDPE pipes on both sides, made out of Stainless steel grade, precisely CNC machined.",
+    sizes: ["1¼”", "1½”", "2”"],
+    grades: "SS 304",
+    properties: [],
+    link: "hose-collar",
+    class:
+      "hover:scale-110  transition duration-300  scale-75 w-auto hover:scale-90",
+  },
+
+  {
+    id: 10,
+    name: "Reducer Bush (SS 304)",
+    imageUrl: p12,
+    description:
+      "A reducer bush is used to connect pipes of different diameters without causing flow disruption.",
+    sizes: ["1¼”X1”", "1½”X1”", "1½”X1¼”", "2”X1½”"],
+    grades: "",
+    properties: [],
+    link: "reducer-bush",
+    class:
+      "hover:scale-110 top-10 transition duration-300 scale-100 w-auto h-28 mt-12",
+  },
+  {
+    id: 11,
+    name: "Expander Bush (SS 304)",
+    imageUrl: p1,
+    description:
+      "Super heavy adapters ensure they withstand substantial loads and stresses, making them suitable for heavy-duty applications.",
+    sizes: ["1¼”X1½”", "1½”X2”"],
+    grades: "",
+    properties: [],
+    link: "expander-bush",
+    class:
+      "hover:scale-110 transition duration-300 scale-100 w-auto h-28 mt-12",
+  },
+  {
+    id: 12,
+    name: "Foot Valve (SS 304)",
+    imageUrl: p3,
+    description:
+      "Foot Valve incorporates a double guide support for plunger & O-ring for a positive seal.",
+    sizes: ["1”", "1½”"],
+    grades: "SS 304",
+    properties: [],
+    link: "foot-valves",
+    class:
+      "hover:scale-110 transition duration-300 scale-100 w-auto h-36 mt-10",
+  },
+  {
+    id: 13,
+    name: "Jet Assembly (SS 304)",
+    imageUrl: p14,
+    description:
+      "Jet Assembly increases the compressor pump’s water flow continuity and minimizes water pipe scaling.",
+    sizes: ["1¼”X1”"],
+    grades: "SS 304",
+    properties: ["Rust Free", "Easy To Install", "100% No Welding"],
+    link: "jet-assembly",
+    class:
+      "hover:scale-110 transition duration-300 w-auto hover:scale-75 scale-100 h-36 mt-10",
+  },
+  {
+    id: 14,
+    name: "Ferrule FCV/NRV (SS 202, SS 304, SS 316)",
     imageUrl: p10,
     description:
-      "FCV/NRV (Flow control & Non-Return Valve) is used to stop the reverse flow of water in FHTC (Functional household tap connection) & to pre- vent water theft. 'EAGLE' FCV/NRV is certified by FCRI (Fluid control research institute).",
+      "FCV/NRV (Flow control & Non-Return Valve) is used to stop the reverse flow of water in FHTC (Functional household tap connection) & to prevent water theft. 'EAGLE' FCV/NRV is certified by FCRI (Fluid control research institute).",
     sizes: [],
-    grades: "",
+    grades: "SS 202, SS 304, SS 316",
     properties: [
       "Stainless Steel SS 316, SS 304, SS 202",
       "CNC Machined",
@@ -171,71 +237,6 @@ export const Products = [
     link: "ferrule-fcv-nrv",
     class:
       "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-40",
-  },
-  {
-    id: 10,
-    name: "Pump Adapters",
-    imageUrl: p11,
-    description:
-      "The bottom adapter is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for 100% accuracy.",
-    sizes: ["1”", "1¼”", "1½”", "2”", "2½”", "3”", "4”", "5”", "6”"],
-    grades: "SS 304 & Cast Iron",
-    properties: [],
-    link: "pump-adapters",
-    class:
-      "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-40",
-  },
-  {
-    id: 11,
-    name: "Reducer Bush",
-    imageUrl: p12,
-    description:
-      "A reducer bush is used to connect pipes of different diameters, typically transitioning from a larger to a smaller diameter. This is crucial in systems where different pipe sizes need to be integrated without causing flow disruption.",
-    sizes: ["1¼”X1”", "1½”X1”", "1½”X11¼", "2”X1½”"],
-    grades: "",
-    properties: [],
-    link: "reducer-bush",
-    class:
-      "hover:scale-110 top-10  transition duration-300 scale-100 w-auto h-28 mt-12",
-  },
-  {
-    id: 12,
-    name: "Rope Collar",
-    imageUrl: p13,
-    description:
-      "Rope Collar is used to secure the pump by connect- ing ropes at both ends of the Rope Collar. 'EAGLE' Rope Collar is a single mould casted component, not welded.",
-    sizes: ["1¼”", "1½”", "2”"],
-    grades: "SS 304",
-    properties: [],
-    link: "rope-collar",
-    class:
-      "hover:scale-110  transition duration-300  scale-100 w-auto hover:scale-90 scale-75 mt-[40px]",
-  },
-  {
-    id: 12,
-    name: "Jet Assembly",
-    imageUrl: p14,
-    description:
-      "Jet Assembly increases the compressor pump´s water flow continuity and to minimize the water pipes scaling.",
-    sizes: ["1¼”X1”"],
-    grades: "SS 304",
-    properties: ["Rust Free", "Easy To Install", "100% No Welding"],
-    link: "jet-assembly",
-    class:
-      "hover:scale-110  transition duration-300 w-auto hover:scale-75 scale-100 h-36 mt-10",
-  },
-  {
-    id: 13,
-    name: "Hose Collar",
-    imageUrl: p15,
-    description:
-      "Hose Collar's application is to Connect HDPE pipe on both the sides, this part is made out of Stainless steel grade, precisely CNC machined thread and Serrations for strong Tensile strength.",
-    sizes: ["1¼”", "1½”", "2”"],
-    grades: "SS 304",
-    properties: [],
-    link: "hose-collar",
-    class:
-      "hover:scale-110  transition duration-300  scale-75 w-auto hover:scale-90",
   },
 ];
 
