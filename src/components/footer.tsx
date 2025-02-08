@@ -16,19 +16,19 @@ const Footer = () => {
   return (
     <section className="mt-10 parallax">
       <footer className="min-h-[300px] bg-[#fff6ed]">
-        <h3 className="text-3xl text-center font-bold pt-6">
+        <h3 className="text-2xl sm:text-3xl text-center font-bold pt-6">
           Our Authorized Distributors{" "}
         </h3>
-        <div className="flex flex-wrap justify-evenly gap-10 my-1 max-sm:flex-col max-sm:items-center">
-          <img src={cepllogo} className="w-24 h-24 sm:w-32 sm:h-32" />
+        <div className="flex  justify-evenly gap-10 my-1 max-sm:flex-row max-sm:items-center">
+          <img src={cepllogo} className="w-20 h-20 sm:w-32 sm:h-32" />
           <img
             src={EnduratekLogo}
             className="w-full  h-32 sm:w-36 sm:h-36 scale-150 max-sm:w-auto"
           />
-          <img src={skanthalogo} className="w-24 h-24 sm:w-36 sm:h-36 pl-4" />
+          <img src={skanthalogo} className="w-20 h-20 sm:w-36 sm:h-36 pl-4" />
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-36 max-lg:px-5 py-10  gap-y-6 justify-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-3 px-36 max-lg:px-5 py-5 sm:py-10  gap-y-6 justify-center">
           <div className="flex justify-center">
             <div className="flex flex-col ">
               <img src={logo} alt="logo" className="w-32 mt-3" />

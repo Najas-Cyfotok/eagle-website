@@ -13,7 +13,7 @@ const ObjectiveSection = () => {
         transition={{ duration: 0.5 }}
         className="w-full text-center "
       >
-        <h2 className="text-5xl font-semibold text-orange-500 inline-block px-5 mt-[110px] mb-[20px]">
+        <h2 className="text-4xl sm:text-5xl font-semibold text-orange-500 inline-block px-2 md:px-5 mt-[110px] md:mt-[110px] mb-[20px]">
           Our Objectives
         </h2>
       </motion.div>
@@ -25,7 +25,7 @@ const ObjectiveSection = () => {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5 }}
-          className="w-1/2 bg-cover bg-center flex flex-col justify-center items-center gap-y-6 p-10 text-white max-lg:w-full bg-opacity-50 relative"
+          className="w-1/2 bg-cover bg-center flex flex-col justify-center items-center gap-y-6 p-5 md:p-10 text-white max-lg:w-full bg-opacity-50 relative"
           // style={{
           //   backgroundImage: `url(${cncturing})`,
           // }}
@@ -36,7 +36,7 @@ const ObjectiveSection = () => {
             className="w-full h-full object-cover absolute -z-10 opacity-50"
           />
           <div className="bg-black bg-opacity-75 p-6 rounded-lg">
-            <p className="text-lg">
+            <p className=" text-sm md:text-lg">
               At Eagle Pipe Fittings and Valves, our goal is to lead the
               industry in providing high-quality, precision-engineered pipe
               fittings and valves. We focus on innovation, quality, and

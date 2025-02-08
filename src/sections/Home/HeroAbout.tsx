@@ -11,14 +11,16 @@ const HeroAbout = () => {
         initial={{ opacity: 0, x: -50 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         whileInView={{ opacity: 1, x: 0 }}
-        className="w-1/2 flex-col flex gap-y-6 max-md:gap-0 max-md:pt-24 relative  min-h-[400px] justify-center max-md:w-full"
+        className="w-1/2 flex-col flex gap-y-6 max-md:gap-0 max-md:pt-24 max-sm:pt-32 relative min-h-[350px] sm:min-h-[400px] justify-center max-md:w-full"
       >
         <img
           src={logoGrey}
           alt="logo"
-          className="absolute top-24 md:top-4  w-full h-full opacity-5 md:-left-56 scale-110 -left-28"
+          className="absolute top-24 md:top-4  w-full h-[80%] sm:h-full opacity-5 md:-left-56 scale-110 -left-28"
         />
-        <h2 className="font-semibold text-5xl text-orange-600">About US</h2>
+        <h2 className="font-semibold text-4xl sm:text-5xl text-orange-600">
+          About US
+        </h2>
         <p className="text-2xl">Engineering with Purpose</p>
         <p className="text-lg">
           Eagle Pipe Fittings and Valves has been a pioneer in the pipe fittings
