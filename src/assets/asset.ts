@@ -47,6 +47,7 @@ import p12 from "./products/images/Product_12.png";
 import p13 from "./products/images/Product_3.png";
 import p14 from "./products/images/Jet_Assembly.png";
 import p15 from "./products/images/hosecollar.png";
+import p16 from "./products/images/nrv.png";
 // import p14
 
 export const Products = [
@@ -237,6 +238,19 @@ export const Products = [
     link: "ferrule-fcv-nrv",
     class:
       "hover:scale-110  transition duration-300  scale-100 mt-8 w-auto h-40",
+  },
+  {
+    id: 15,
+    name: "NRV (SS 304, Cast iron)",
+    imageUrl: p16,
+    description:
+      "The Non-Return Valve (NRV) allows water to flow in one direction, preventing backflow to protect the system and maintain pressure. It is made from SS304 material for enhanced corrosion resistance and features a 33-degree tapered angle at the bottom to ensure a secure seal against backflow.",
+    sizes: ["1”", "1 1/4”", "1 1/2”", "2”"],
+    grades: "SS 304, Cast iron",
+    properties: "",
+    link: "nrv",
+    class:
+      "hover:scale-110  transition duration-300  scale-100 mt-14 w-auto h-32",
   },
 ];
 
