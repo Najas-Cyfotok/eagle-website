@@ -32,6 +32,7 @@ const routes = [
         path: "/product/ferrule-fcv-nrv",
       },
       { name: "Rope Collars (SS 304)", path: "/product/rope-collar" },
+      { name: "NRV (SS 304, Cast iron)", path: "/product/nrv" },
     ],
   },
   { name: "Manufacturing Process", path: "/manufacturing-process" },
