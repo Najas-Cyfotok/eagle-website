@@ -53,7 +53,7 @@ import p16 from "./products/images/nrv.png";
 export const Products = [
   {
     id: 1,
-    name: "Pipe Adapters(SS 304/CI)",
+    name: "Pipe Adapters",
     imageUrl: p5,
     description:
       "The Pipe adapters (Top adapters) is used for connecting top most column pipe to the discharge fitting/discharge bend",
@@ -66,7 +66,7 @@ export const Products = [
   },
   {
     id: 2,
-    name: "Pump Adapters(SS 304)",
+    name: "Pump Adapters",
     imageUrl: p11,
     description:
       "The bottom adapter is used for connecting submersible pump to the column pipe. All threads are checked with fitment gauges for 100% accuracy.",
@@ -79,7 +79,7 @@ export const Products = [
   },
   {
     id: 3,
-    name: "Reducers(SS 304)",
+    name: "Reducers",
     imageUrl: p2,
     description:
       "Reducers are designed with ACME thread to ensure proper gripping & there is no chance of column slippage during installation & removal of pumps.",
@@ -92,7 +92,7 @@ export const Products = [
   },
   {
     id: 4,
-    name: "Expanders(SS 304)",
+    name: "Expanders",
     imageUrl: p4,
     description:
       "Expanders are designed to expand the pump discharge connecting the BSP Threaded side to the pump 6 ACME Threaded side to the column pipe.",
@@ -105,7 +105,7 @@ export const Products = [
   },
   {
     id: 5,
-    name: "Super Heavy Adapters(SS 304)",
+    name: "Super Heavy Adapters",
     imageUrl: p8,
     description:
       "Super heavy adapters ensure they withstand substantial loads and stresses, making them suitable for heavy-duty applications.",
@@ -118,7 +118,7 @@ export const Products = [
   },
   {
     id: 6,
-    name: "Cast Iron Adapters(CI)",
+    name: "Cast Iron Adapters",
     imageUrl: p9,
     description:
       "Cast Iron Adapters are suitable for low-depth borewells, the outer surface is finished with powder coating for atmospheric protection.",
@@ -131,7 +131,7 @@ export const Products = [
   },
   {
     id: 7,
-    name: "Rope Collar(SS 304)",
+    name: "Rope Collar",
     imageUrl: p13,
     description:
       "Rope Collar is used to secure the pump by connecting ropes at both ends of the Rope Collar.",
@@ -144,7 +144,7 @@ export const Products = [
   },
   {
     id: 8,
-    name: "Hose Nipple (Stainless Steel)",
+    name: "Hose Nipple",
     imageUrl: p6,
     description:
       "Hose Nipple's application is to hold the Pump and HDPE pipe, made out of Stainless steel grade, precisely CNC machined.",
@@ -157,7 +157,7 @@ export const Products = [
   },
   {
     id: 9,
-    name: "Hose Collar  (Stainless Steel)",
+    name: "Hose Collar ",
     imageUrl: p15,
     description:
       "Hose Collar is used to Connect HDPE pipes on both sides, made out of Stainless steel grade, precisely CNC machined.",
@@ -171,7 +171,7 @@ export const Products = [
 
   {
     id: 10,
-    name: "Reducer Bush (SS 304)",
+    name: "Reducer Bush ",
     imageUrl: p12,
     description:
       "A reducer bush is used to connect pipes of different diameters without causing flow disruption.",
@@ -184,7 +184,7 @@ export const Products = [
   },
   {
     id: 11,
-    name: "Expander Bush (SS 304)",
+    name: "Expander Bush ",
     imageUrl: p1,
     description:
       "Super heavy adapters ensure they withstand substantial loads and stresses, making them suitable for heavy-duty applications.",
@@ -197,7 +197,7 @@ export const Products = [
   },
   {
     id: 12,
-    name: "Foot Valve (SS 304)",
+    name: "Foot Valve",
     imageUrl: p3,
     description:
       "Foot Valve incorporates a double guide support for plunger & O-ring for a positive seal.",
@@ -210,7 +210,7 @@ export const Products = [
   },
   {
     id: 13,
-    name: "Jet Assembly (SS 304)",
+    name: "Jet Assembly ",
     imageUrl: p14,
     description:
       "Jet Assembly increases the compressor pump’s water flow continuity and minimizes water pipe scaling.",
@@ -223,7 +223,7 @@ export const Products = [
   },
   {
     id: 14,
-    name: "Ferrule FCV/NRV (SS 202, SS 304, SS 316)",
+    name: "Ferrule FCV/NRV ",
     imageUrl: p10,
     description:
       "FCV/NRV (Flow control & Non-Return Valve) is used to stop the reverse flow of water in FHTC (Functional household tap connection) & to prevent water theft. 'EAGLE' FCV/NRV is certified by FCRI (Fluid control research institute).",
@@ -241,7 +241,7 @@ export const Products = [
   },
   {
     id: 15,
-    name: "NRV (SS 304, Cast iron)",
+    name: "NRV",
     imageUrl: p16,
     description:
       "The Non-Return Valve (NRV) allows water to flow in one direction, preventing backflow to protect the system and maintain pressure. It is made from SS304 material for enhanced corrosion resistance and features a 33-degree tapered angle at the bottom to ensure a secure seal against backflow.",
